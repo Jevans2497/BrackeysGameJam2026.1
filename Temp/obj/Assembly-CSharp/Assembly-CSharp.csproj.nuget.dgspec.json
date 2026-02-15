@@ -1,0 +1,2685 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jevans/Desktop/BrackeysJam2026/Assembly-CSharp.csproj": {}
+  },
+  "projects": {
+    "/Users/jevans/Desktop/BrackeysJam2026/Assembly-CSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Assembly-CSharp.csproj",
+        "projectName": "Assembly-CSharp",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Assembly-CSharp.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Assembly-CSharp/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/PsdPlugin.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/PsdPlugin.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Common.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Common.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Path.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Path.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Psdimporter.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Psdimporter.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tooling.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tooling.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.ForUI.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.ForUI.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.PlasticSCM.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.PlasticSCM.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Rider.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Rider.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Searcher.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Searcher.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.SettingsProvider.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.SettingsProvider.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Shared.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Shared.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualStudio.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualStudio.Editor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/PsdPlugin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/PsdPlugin.csproj",
+        "projectName": "PsdPlugin",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/PsdPlugin.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/PsdPlugin/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj",
+        "projectName": "Unity.2D.Animation.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Animation.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj",
+        "projectName": "Unity.2D.Animation.Runtime",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Animation.Runtime/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Common.csproj",
+        "projectName": "Unity.2D.Aseprite.Common",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Common.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Aseprite.Common/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Editor.csproj",
+        "projectName": "Unity.2D.Aseprite.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Aseprite.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Common.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Aseprite.Common.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj",
+        "projectName": "Unity.2D.Common.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Common.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Path.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Path.Editor.csproj",
+        "projectName": "Unity.2D.Common.Path.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Path.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Common.Path.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj",
+        "projectName": "Unity.2D.Common.Runtime",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Common.Runtime/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Editor.csproj",
+        "projectName": "Unity.2D.IK.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.IK.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Runtime.csproj",
+        "projectName": "Unity.2D.IK.Runtime",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.IK.Runtime.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.IK.Runtime/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Psdimporter.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Psdimporter.Editor.csproj",
+        "projectName": "Unity.2D.Psdimporter.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Psdimporter.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Psdimporter.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/PsdPlugin.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/PsdPlugin.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Animation.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Editor.csproj",
+        "projectName": "Unity.2D.SpriteShape.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.SpriteShape.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Path.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Path.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Runtime.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Runtime.csproj",
+        "projectName": "Unity.2D.SpriteShape.Runtime",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.SpriteShape.Runtime.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.SpriteShape.Runtime/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Common.Runtime.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.csproj",
+        "projectName": "Unity.2D.Tilemap.Extras",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Tilemap.Extras/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.Editor.csproj",
+        "projectName": "Unity.2D.Tilemap.Extras.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Tilemap.Extras.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tilemap.Extras.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tooling.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tooling.Editor.csproj",
+        "projectName": "Unity.2D.Tooling.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.2D.Tooling.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.2D.Tooling.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj",
+        "projectName": "Unity.Burst",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Burst/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.Editor.csproj",
+        "projectName": "Unity.Burst.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Burst.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj",
+        "projectName": "Unity.Collections",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Collections/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Burst.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.Editor.csproj",
+        "projectName": "Unity.Collections.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Collections.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Collections.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj",
+        "projectName": "Unity.InputSystem",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.InputSystem/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.ForUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.ForUI.csproj",
+        "projectName": "Unity.InputSystem.ForUI",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.ForUI.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.InputSystem.ForUI/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj",
+        "projectName": "Unity.InternalAPIEditorBridge.001",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEditorBridge.001.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.InternalAPIEditorBridge.001/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj",
+        "projectName": "Unity.InternalAPIEngineBridge.001",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InternalAPIEngineBridge.001.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.InternalAPIEngineBridge.001/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj",
+        "projectName": "Unity.Mathematics",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Mathematics/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.Editor.csproj",
+        "projectName": "Unity.Mathematics.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Mathematics.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Mathematics.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.PlasticSCM.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.PlasticSCM.Editor.csproj",
+        "projectName": "Unity.PlasticSCM.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.PlasticSCM.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.PlasticSCM.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Rider.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Rider.Editor.csproj",
+        "projectName": "Unity.Rider.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Rider.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Rider.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Searcher.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Searcher.Editor.csproj",
+        "projectName": "Unity.Searcher.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Searcher.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Searcher.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.csproj",
+        "projectName": "Unity.Timeline",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Timeline/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.Editor.csproj",
+        "projectName": "Unity.Timeline.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.Timeline.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.Timeline.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj",
+        "projectName": "Unity.VisualScripting.Core",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.Core/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj",
+        "projectName": "Unity.VisualScripting.Core.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.Core.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj",
+        "projectName": "Unity.VisualScripting.Flow",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.Flow/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj",
+        "projectName": "Unity.VisualScripting.Flow.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.Flow.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.SettingsProvider.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.SettingsProvider.Editor.csproj",
+        "projectName": "Unity.VisualScripting.SettingsProvider.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.SettingsProvider.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.SettingsProvider.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Shared.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Shared.Editor.csproj",
+        "projectName": "Unity.VisualScripting.Shared.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Shared.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.Shared.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.Editor.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj",
+        "projectName": "Unity.VisualScripting.State",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.State/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.Editor.csproj",
+        "projectName": "Unity.VisualScripting.State.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.State.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj"
+              },
+              "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj": {
+                "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.State.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualStudio.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualStudio.Editor.csproj",
+        "projectName": "Unity.VisualStudio.Editor",
+        "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualStudio.Editor.csproj",
+        "packagesPath": "/Users/jevans/.nuget/packages/",
+        "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualStudio.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jevans/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

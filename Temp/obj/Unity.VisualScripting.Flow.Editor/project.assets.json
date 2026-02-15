@@ -1,0 +1,158 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "Unity.InputSystem/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Unity.InputSystem.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.InputSystem.dll": {}
+        }
+      },
+      "Unity.VisualScripting.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.InputSystem": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.VisualScripting.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.VisualScripting.Core.dll": {}
+        }
+      },
+      "Unity.VisualScripting.Core.Editor/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.VisualScripting.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.VisualScripting.Core.Editor.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.VisualScripting.Core.Editor.dll": {}
+        }
+      },
+      "Unity.VisualScripting.Flow/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Unity.InputSystem": "1.0.0",
+          "Unity.VisualScripting.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Unity.VisualScripting.Flow.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Unity.VisualScripting.Flow.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Unity.InputSystem/1.0.0": {
+      "type": "project",
+      "path": "Unity.InputSystem.csproj",
+      "msbuildProject": "Unity.InputSystem.csproj"
+    },
+    "Unity.VisualScripting.Core/1.0.0": {
+      "type": "project",
+      "path": "Unity.VisualScripting.Core.csproj",
+      "msbuildProject": "Unity.VisualScripting.Core.csproj"
+    },
+    "Unity.VisualScripting.Core.Editor/1.0.0": {
+      "type": "project",
+      "path": "Unity.VisualScripting.Core.Editor.csproj",
+      "msbuildProject": "Unity.VisualScripting.Core.Editor.csproj"
+    },
+    "Unity.VisualScripting.Flow/1.0.0": {
+      "type": "project",
+      "path": "Unity.VisualScripting.Flow.csproj",
+      "msbuildProject": "Unity.VisualScripting.Flow.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "Unity.InputSystem >= 1.0.0",
+      "Unity.VisualScripting.Core >= 1.0.0",
+      "Unity.VisualScripting.Core.Editor >= 1.0.0",
+      "Unity.VisualScripting.Flow >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/jevans/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj",
+      "projectName": "Unity.VisualScripting.Flow.Editor",
+      "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.Editor.csproj",
+      "packagesPath": "/Users/jevans/.nuget/packages/",
+      "outputPath": "/Users/jevans/Desktop/BrackeysJam2026/Temp/obj/Unity.VisualScripting.Flow.Editor/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/jevans/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj": {
+              "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.InputSystem.csproj"
+            },
+            "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj": {
+              "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.csproj"
+            },
+            "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj": {
+              "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Core.Editor.csproj"
+            },
+            "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj": {
+              "projectPath": "/Users/jevans/Desktop/BrackeysJam2026/Unity.VisualScripting.Flow.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.101/libexec/sdk/10.0.101/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
