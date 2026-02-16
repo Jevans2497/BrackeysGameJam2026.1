@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
     CapsuleCollider2D col;
+    Animator animator;
+    SpriteRenderer sr;
 
     float moveInput;
     float jumpInput;
@@ -46,6 +48,8 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CapsuleCollider2D>();
+        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         input = new PlayerInputActions();
         input.Enable();
     }
@@ -94,8 +98,19 @@ public class Player : MonoBehaviour
         else
             velocity.x = Mathf.MoveTowards(rb.linearVelocity.x, 0f, decel * Time.fixedDeltaTime);
 
-
         rb.linearVelocity = new Vector2(velocity.x, rb.linearVelocity.y);
+
+        HandleSpriteBehavior(isAccelerating, isGrounded);
+    }
+
+    private void HandleSpriteBehavior(bool isAccelerating, bool isGrounded)
+    {
+        animator.SetBool("isRunning", isAccelerating && isGrounded);
+        if (rb.linearVelocity.x > 0.01f)
+            sr.flipX = false;   // Facing right
+        else if (rb.linearVelocity.x < -0.01f)
+            sr.flipX = true;    // Facing left
+
     }
 
     private void HandleJumpInput()
@@ -182,7 +197,7 @@ public class Player : MonoBehaviour
     private IEnumerator SquashAndStretch()
     {
 
-        float duration = 0.25f;
+        float duration = 0.2f;
         Vector3 squashDownScale = new(originalScale.x * SQUASH_FACTOR, originalScale.y * STRETCH_FACTOR, originalScale.z);
         Vector3 stretchUpScale = new(originalScale.x * STRETCH_FACTOR, originalScale.y * SQUASH_FACTOR, originalScale.z);
 
