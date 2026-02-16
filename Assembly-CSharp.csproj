@@ -48,10 +48,16 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.3.2f1-arm64/Unity.app/Contents/Resources/BuildPipeline/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/VirtualCameraManager.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/Scripts/ColorPalette.cs" />
     <Compile Include="Assets/PlayerInputActions.cs" />
     <Compile Include="Assets/Scripts/CameraShake.cs" />
+    <Compile Include="Assets/Scripts/LevelCompleteTriggerLine.cs" />
+    <Compile Include="Assets/Scripts/EnvironmentObjects/GammaLaser.cs" />
+    <Compile Include="Assets/Scripts/TimeDilation.cs" />
+    <Compile Include="Assets/Scripts/LevelManager.cs" />
+    <Compile Include="Assets/Scripts/TimeManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1223,6 +1229,7 @@
     <ProjectReference Include="Unity.2D.Common.Path.Editor.csproj" />
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj" />
     <ProjectReference Include="PsdPlugin.csproj" />
+    <ProjectReference Include="Cinemachine.csproj" />
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj" />
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
     <ProjectReference Include="Unity.2D.Animation.Editor.csproj" />
@@ -1256,6 +1263,7 @@
     <ProjectReference Include="Unity.Mathematics.csproj" />
     <ProjectReference Include="Unity.Burst.csproj" />
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj" />
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.csproj" />
     <ProjectReference Include="Unity.Collections.Editor.csproj" />
     <ProjectReference Include="Unity.2D.SpriteShape.Editor.csproj" />

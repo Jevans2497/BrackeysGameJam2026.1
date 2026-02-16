@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ColorPalette
   m_EditorClassIdentifier: Assembly-CSharp::ColorPalette
   background: {r: 0, g: 0, b: 0, a: 0}
+  timeDilation1x: {r: 0.42352942, g: 0.8784314, b: 0.7490196, a: 1}

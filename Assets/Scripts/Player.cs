@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float checkRadius = 0.1f;
+    [SerializeField] private ParticleSystem loseTimeDilationParticles;
 
     Rigidbody2D rb;
     CapsuleCollider2D col;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
 
     float moveInput;
     float jumpInput;
+    bool consumeInput;
 
     PlayerInputActions input;
 
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
     private const float GROUND_DECELERATION = 50f;
     private const float AIR_ACCELERATION = 50f;
     private const float AIR_DECELERATION = 30f;
+    public bool isFacingRight = true;
 
     //JUMPING
     private const float JUMP_FORCE = 15f;
@@ -43,6 +46,9 @@ public class Player : MonoBehaviour
     private Vector3 originalScale;
     private Vector2 velocityLastFrame;
     private bool wasGroundedLastFrame;
+
+    private TimeDilation currentTimeDilation;
+    private TimeDilation currentlyCollidingTimeDilation;
 
     void Awake()
     {
@@ -74,6 +80,7 @@ public class Player : MonoBehaviour
         HandleLandingEffects();
         velocityLastFrame = rb.linearVelocity;
         wasGroundedLastFrame = IsGrounded();
+        HandleConsumeInput();
     }
 
     private void ReadInput()
@@ -81,6 +88,7 @@ public class Player : MonoBehaviour
         moveInput = input.Player.Move.ReadValue<Vector2>().x;
         jumpInput = input.Player.Jump.ReadValue<Vector2>().y;
         jumpReleased = jumpInput < 0.1f;
+        consumeInput = input.Player.Consume.IsPressed();
     }
 
     private void HandleMoveInput()
@@ -107,10 +115,15 @@ public class Player : MonoBehaviour
     {
         animator.SetBool("isRunning", isAccelerating && isGrounded);
         if (rb.linearVelocity.x > 0.01f)
+        {
             sr.flipX = false;   // Facing right
+            isFacingRight = true;
+        }
         else if (rb.linearVelocity.x < -0.01f)
+        {
             sr.flipX = true;    // Facing left
-
+            isFacingRight = false;
+        }
     }
 
     private void HandleJumpInput()
@@ -123,6 +136,36 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JUMP_FORCE);
             jumpDelayTimer = JUMP_DELAY;
         }
+    }
+
+    private void HandleConsumeInput()
+    {
+        if (consumeInput && currentlyCollidingTimeDilation != null)
+        {
+            ConsumeTimeDilation();
+        }
+
+        if (!consumeInput && currentTimeDilation != null)
+        {
+            ReleaseTimeDilation();
+        }
+    }
+
+    private void ConsumeTimeDilation()
+    {
+        StartCoroutine(RunColorShiftAnimation(currentlyCollidingTimeDilation.GetColor(), 1.0f));
+        currentlyCollidingTimeDilation.Consume(transform);
+        currentTimeDilation = currentlyCollidingTimeDilation;
+        TimeManager.Instance.SetTimeDilation(currentTimeDilation.speed);
+        currentlyCollidingTimeDilation = null;
+    }
+
+    public void ReleaseTimeDilation()
+    {
+        StartCoroutine(RunColorShiftAnimation(Color.white, 1.0f));
+        currentTimeDilation = null;
+        TimeManager.Instance.SetTimeDilation(TimeDilationSpeed.fastSpeed);
+        loseTimeDilationParticles.Play();
     }
 
     private void HandleJumpReleased()
@@ -234,4 +277,57 @@ public class Player : MonoBehaviour
         transform.localScale = originalScale;
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("TimeDilation"))
+        {
+            OnEnteredTimeDilation(other);
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("GammaLaser"))
+        {
+            Debug.Log("Dead");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("TimeDilation"))
+        {
+            OnExitTimeDilation(other);
+        }
+    }
+
+
+
+    private void OnEnteredTimeDilation(Collider2D other)
+    {
+        TimeDilation timeDilation = other.GetComponent<TimeDilation>();
+        if (timeDilation != null)
+        {
+            currentlyCollidingTimeDilation = timeDilation;
+        }
+    }
+
+    private void OnExitTimeDilation(Collider2D other)
+    {
+        TimeDilation timeDilation = other.GetComponent<TimeDilation>();
+        if (timeDilation != null && timeDilation == currentlyCollidingTimeDilation)
+        {
+            currentlyCollidingTimeDilation = null;
+        }
+    }
+
+    private IEnumerator RunColorShiftAnimation(Color targetColor, float duration)
+    {
+        Color originalColor = sr.color;
+        float elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            float t = elapsedTime / duration;
+            sr.color = Color.Lerp(originalColor, targetColor, t);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        sr.color = targetColor;
+    }
 }
