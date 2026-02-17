@@ -4,6 +4,7 @@ using UnityEngine;
 public class ColorPalette : ScriptableObject
 {
     public Color background;
-    public Color timeDilation1x;
-
+    public Color timeDilationNormalSpeed;
+    public Color timeDilationFastSpeed;
+    public Color disabled;
 }

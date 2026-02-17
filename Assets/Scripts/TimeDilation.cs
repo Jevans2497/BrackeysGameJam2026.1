@@ -48,7 +48,7 @@ public class TimeDilation : MonoBehaviour
         switch (speed)
         {
             case TimeDilationSpeed.normalSpeed:
-                return colorPalette.timeDilation1x;
+                return colorPalette.timeDilationNormalSpeed;
             default:
                 return particleSystem.main.startColor.color;
         }

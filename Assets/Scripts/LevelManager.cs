@@ -1,12 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
     public static LevelManager Instance;
     public Player player;
+    // public GameObject levelsParent;
+    public List<GameObject> levels;
 
-    int currentLevel = 0;
+    int currentLevelIndex = 0;
 
     private void Awake()
     {
@@ -18,13 +20,15 @@ public class LevelManager : MonoBehaviour
 
     public void AdvanceLevel()
     {
-        currentLevel++;
-        LevelCameraController.Instance.MoveCameraToLevel(currentLevel);
+        currentLevelIndex++;
+        GameObject currentLevel = levels[currentLevelIndex];
+        Instantiate(currentLevel, new Vector3(currentLevelIndex * 20.0f, 0.0f, 0.0f), Quaternion.identity);
+        LevelCameraController.Instance.MoveCameraToLevel(currentLevelIndex);
     }
 
     public void GoBackLevel()
     {
-        currentLevel--;
-        LevelCameraController.Instance.MoveCameraToLevel(currentLevel);
+        currentLevelIndex--;
+        LevelCameraController.Instance.MoveCameraToLevel(currentLevelIndex);
     }
 }

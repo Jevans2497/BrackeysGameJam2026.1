@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private LayerMask movingPlatformLayer;
+    [SerializeField] private LayerMask electrifiedPlatformLayer;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private ParticleSystem loseTimeDilationParticles;
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         originalScale = transform.localScale;
-        jumpableLayers.AddRange(new LayerMask[] { groundLayer, movingPlatformLayer });
+        jumpableLayers.AddRange(new LayerMask[] { groundLayer });
     }
 
     void Update()
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         HandleFalling();
         HandleLandingEffects();
         HandleConsumeInput();
-        HandleOnMovingPlatform();
+        HandleElectrifiedPlatform();
         velocityLastFrame = rb.linearVelocity;
         wasGroundedLastFrame = IsGrounded();
 
@@ -149,6 +149,7 @@ public class Player : MonoBehaviour
         bool canJump = (IsGrounded() || coyoteTimeTimer > 0f) && jumpDelayTimer <= 0f && isJumpEnabled;
         if (userPressedJump && canJump)
         {
+            Debug.Log("Jumped");
             StartCoroutine(SquashAndStretch());
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JUMP_FORCE);
             jumpDelayTimer = JUMP_DELAY;
@@ -222,40 +223,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    private MovingPlatform currentPlatform;
-    private bool peakBoostUsed = false;
 
-    private void HandleOnMovingPlatform()
+    private void HandleElectrifiedPlatform()
     {
-        Collider2D hit = Physics2D.OverlapCircle(groundCheck.position, 0.75f, movingPlatformLayer);
-
-        if (hit == null)
+        if (IsOnElectrifiedPlatform())
         {
-            currentPlatform = null;
-            peakBoostUsed = false;
-            return;
-        }
-
-        if (TimeManager.Instance.currentSpeed != TimeDilationSpeed.fastSpeed)
-        {
-            currentPlatform = hit.GetComponentInParent<MovingPlatform>();
-            if (currentPlatform == null) return;
-
-            if (IsGrounded())
-            {
-                transform.position += (Vector3)currentPlatform.Delta;
-            }
-
-        }
-
-        if (!peakBoostUsed &&
-            TimeManager.Instance.currentSpeed == TimeDilationSpeed.fastSpeed)
-        {
-            isJumpEnabled = false;
             isFallingEnabled = false;
-            peakBoostUsed = true;
-            float boostedJump = JUMP_FORCE * 1.25f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, boostedJump);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, JUMP_FORCE * 1.25f);
         }
     }
 
@@ -264,9 +238,9 @@ public class Player : MonoBehaviour
         return jumpableLayers.Any(layer => Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, layer));
     }
 
-    private bool IsOnMovingPlatform()
+    private bool IsOnElectrifiedPlatform()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, movingPlatformLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, electrifiedPlatformLayer);
     }
 
     private void UpdateJumpTimers()
