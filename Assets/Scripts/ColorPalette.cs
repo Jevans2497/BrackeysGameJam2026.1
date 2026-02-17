@@ -7,4 +7,6 @@ public class ColorPalette : ScriptableObject
     public Color timeDilationNormalSpeed;
     public Color timeDilationFastSpeed;
     public Color disabled;
+    public Color alphaLaserTransparent;
+    public Color alphaLaserSolidify;
 }

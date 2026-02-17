@@ -317,7 +317,7 @@ public class Player : MonoBehaviour
         {
             OnEnteredTimeDilation(other);
         }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("GammaLaser"))
+        else if (other.gameObject.layer == LayerMask.NameToLayer("GammaLaser") || other.gameObject.layer == LayerMask.NameToLayer("DeathLine"))
         {
             Debug.Log("Dead");
         }
