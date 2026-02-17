@@ -1,5 +1,9 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using NUnit.Framework;
+using TMPro;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
@@ -7,9 +11,12 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask movingPlatformLayer;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float checkRadius = 0.1f;
+    [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private ParticleSystem loseTimeDilationParticles;
+
+    private List<LayerMask> jumpableLayers = new List<LayerMask>();
 
     Rigidbody2D rb;
     CapsuleCollider2D col;
@@ -23,7 +30,7 @@ public class Player : MonoBehaviour
     PlayerInputActions input;
 
     //MOVEMENT
-    private const float MAX_SPEED = 15f;
+    private const float MAX_SPEED = 10f;
     private const float GROUND_ACCELERATION = 80f;
     private const float GROUND_DECELERATION = 50f;
     private const float AIR_ACCELERATION = 50f;
@@ -31,7 +38,7 @@ public class Player : MonoBehaviour
     public bool isFacingRight = true;
 
     //JUMPING
-    private const float JUMP_FORCE = 15f;
+    private const float JUMP_FORCE = 13f;
     private const float JUMP_DELAY = 0.3f;
     private float jumpDelayTimer = 0.0f;
     private const float COYOTE_TIME = 0.15f;
@@ -46,6 +53,8 @@ public class Player : MonoBehaviour
     private Vector3 originalScale;
     private Vector2 velocityLastFrame;
     private bool wasGroundedLastFrame;
+    private bool isJumpEnabled = true;
+    private bool isFallingEnabled = true;
 
     private TimeDilation currentTimeDilation;
     private TimeDilation currentlyCollidingTimeDilation;
@@ -63,6 +72,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         originalScale = transform.localScale;
+        jumpableLayers.AddRange(new LayerMask[] { groundLayer, movingPlatformLayer });
     }
 
     void Update()
@@ -78,9 +88,16 @@ public class Player : MonoBehaviour
         HandleJumpReleased();
         HandleFalling();
         HandleLandingEffects();
+        HandleConsumeInput();
+        HandleOnMovingPlatform();
         velocityLastFrame = rb.linearVelocity;
         wasGroundedLastFrame = IsGrounded();
-        HandleConsumeInput();
+
+        if (IsGrounded())
+        {
+            isFallingEnabled = true;
+            isJumpEnabled = true;
+        }
     }
 
     private void ReadInput()
@@ -129,7 +146,7 @@ public class Player : MonoBehaviour
     private void HandleJumpInput()
     {
         bool userPressedJump = jumpInput > 0.1f || jumpBufferTimer > 0f;
-        bool canJump = (IsGrounded() || coyoteTimeTimer > 0f) && jumpDelayTimer <= 0f;
+        bool canJump = (IsGrounded() || coyoteTimeTimer > 0f) && jumpDelayTimer <= 0f && isJumpEnabled;
         if (userPressedJump && canJump)
         {
             StartCoroutine(SquashAndStretch());
@@ -153,7 +170,7 @@ public class Player : MonoBehaviour
 
     private void ConsumeTimeDilation()
     {
-        StartCoroutine(RunColorShiftAnimation(currentlyCollidingTimeDilation.GetColor(), 1.0f));
+        StartCoroutine(RunColorShiftAnimation(currentlyCollidingTimeDilation.GetColor(), 0.5f));
         currentlyCollidingTimeDilation.Consume(transform);
         currentTimeDilation = currentlyCollidingTimeDilation;
         TimeManager.Instance.SetTimeDilation(currentTimeDilation.speed);
@@ -162,7 +179,7 @@ public class Player : MonoBehaviour
 
     public void ReleaseTimeDilation()
     {
-        StartCoroutine(RunColorShiftAnimation(Color.white, 1.0f));
+        StartCoroutine(RunColorShiftAnimation(Color.white, 0.5f));
         currentTimeDilation = null;
         TimeManager.Instance.SetTimeDilation(TimeDilationSpeed.fastSpeed);
         loseTimeDilationParticles.Play();
@@ -170,6 +187,7 @@ public class Player : MonoBehaviour
 
     private void HandleJumpReleased()
     {
+        if (isFallingEnabled == false) return;
         if (jumpReleased && rb.linearVelocity.y > 0f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * JUMP_RELEASED_MULTIPLIER);
@@ -178,6 +196,7 @@ public class Player : MonoBehaviour
 
     private void HandleFalling()
     {
+        if (isFallingEnabled == false) return;
         if (rb.linearVelocity.y < 0)
         {
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * FALL_MULTIPLIER * Time.fixedDeltaTime;
@@ -203,9 +222,51 @@ public class Player : MonoBehaviour
         }
     }
 
+    private MovingPlatform currentPlatform;
+    private bool peakBoostUsed = false;
+
+    private void HandleOnMovingPlatform()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(groundCheck.position, 0.75f, movingPlatformLayer);
+
+        if (hit == null)
+        {
+            currentPlatform = null;
+            peakBoostUsed = false;
+            return;
+        }
+
+        if (TimeManager.Instance.currentSpeed != TimeDilationSpeed.fastSpeed)
+        {
+            currentPlatform = hit.GetComponentInParent<MovingPlatform>();
+            if (currentPlatform == null) return;
+
+            if (IsGrounded())
+            {
+                transform.position += (Vector3)currentPlatform.Delta;
+            }
+
+        }
+
+        if (!peakBoostUsed &&
+            TimeManager.Instance.currentSpeed == TimeDilationSpeed.fastSpeed)
+        {
+            isJumpEnabled = false;
+            isFallingEnabled = false;
+            peakBoostUsed = true;
+            float boostedJump = JUMP_FORCE * 1.25f;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, boostedJump);
+        }
+    }
+
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+        return jumpableLayers.Any(layer => Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, layer));
+    }
+
+    private bool IsOnMovingPlatform()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, movingPlatformLayer);
     }
 
     private void UpdateJumpTimers()
@@ -239,7 +300,6 @@ public class Player : MonoBehaviour
 
     private IEnumerator SquashAndStretch()
     {
-
         float duration = 0.2f;
         Vector3 squashDownScale = new(originalScale.x * SQUASH_FACTOR, originalScale.y * STRETCH_FACTOR, originalScale.z);
         Vector3 stretchUpScale = new(originalScale.x * STRETCH_FACTOR, originalScale.y * SQUASH_FACTOR, originalScale.z);
@@ -297,14 +357,14 @@ public class Player : MonoBehaviour
         }
     }
 
-
-
     private void OnEnteredTimeDilation(Collider2D other)
     {
         TimeDilation timeDilation = other.GetComponent<TimeDilation>();
         if (timeDilation != null)
         {
             currentlyCollidingTimeDilation = timeDilation;
+            StartCoroutine(RunColorShiftAnimation(currentlyCollidingTimeDilation.GetColor(), 0.5f));
+            TimeManager.Instance.SetTimeDilation(TimeDilationSpeed.normalSpeed);
         }
     }
 
@@ -314,6 +374,12 @@ public class Player : MonoBehaviour
         if (timeDilation != null && timeDilation == currentlyCollidingTimeDilation)
         {
             currentlyCollidingTimeDilation = null;
+            if (currentTimeDilation == null)
+            {
+                StartCoroutine(RunColorShiftAnimation(Color.white, 0.5f));
+                TimeManager.Instance.SetTimeDilation(TimeDilationSpeed.fastSpeed);
+                loseTimeDilationParticles.Play();
+            }
         }
     }
 
