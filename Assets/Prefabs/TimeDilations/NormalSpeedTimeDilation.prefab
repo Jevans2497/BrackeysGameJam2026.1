@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7765382542835907101}
   - component: {fileID: 6482626309953787050}
   m_Layer: 6
-  m_Name: 1XSpeedTimeDilation
+  m_Name: NormalSpeedTimeDilation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

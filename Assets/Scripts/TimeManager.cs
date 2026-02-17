@@ -10,6 +10,7 @@ public class TimeManager : MonoBehaviour
 {
     public static TimeManager Instance;
     public TimeDilationSpeed currentSpeed;
+    private TimeDilationSpeed levelSpeed;
     public Action<TimeDilationSpeed> OnTimeDilationChange;
 
     private void Awake()
@@ -29,5 +30,16 @@ public class TimeManager : MonoBehaviour
     {
         currentSpeed = speed;
         OnTimeDilationChange?.Invoke(speed);
+    }
+
+    public void SetTimeDilationForLevel(TimeDilationSpeed speed)
+    {
+        levelSpeed = speed;
+        ResetTimeToLevelTime();
+    }
+
+    public void ResetTimeToLevelTime()
+    {
+        SetTimeDilation(levelSpeed);
     }
 }

@@ -44,7 +44,6 @@ public class FallingBox : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("here");
         if (other.gameObject.layer == LayerMask.NameToLayer("DeathLine"))
         {
             transform.position = new Vector3(transform.position.x, initialY, transform.position.z);

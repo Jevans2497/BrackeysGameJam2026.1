@@ -16,6 +16,11 @@ public class GammaLaser : MonoBehaviour
         HandleTimeDilationChanged(TimeManager.Instance.currentSpeed);
     }
 
+    private void OnDisable()
+    {
+        TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
+    }
+
     private void FixedUpdate()
     {
         if (initialDelay >= 0)

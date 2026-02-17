@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    [SerializeField] private ColorPalette colorPalette;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask electrifiedPlatformLayer;
     [SerializeField] private Transform groundCheck;
@@ -158,7 +158,7 @@ public class Player : MonoBehaviour
 
     private void HandleConsumeInput()
     {
-        if (consumeInput && currentlyCollidingTimeDilation != null)
+        if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null)
         {
             ConsumeTimeDilation();
         }
@@ -171,19 +171,21 @@ public class Player : MonoBehaviour
 
     private void ConsumeTimeDilation()
     {
-        StartCoroutine(RunColorShiftAnimation(currentlyCollidingTimeDilation.GetColor(), 0.5f));
+        SetToTimeState(currentlyCollidingTimeDilation.speed);
         currentlyCollidingTimeDilation.Consume(transform);
         currentTimeDilation = currentlyCollidingTimeDilation;
-        TimeManager.Instance.SetTimeDilation(currentTimeDilation.speed);
         currentlyCollidingTimeDilation = null;
     }
 
     public void ReleaseTimeDilation()
     {
-        StartCoroutine(RunColorShiftAnimation(Color.white, 0.5f));
+        ResetTimeState();
         currentTimeDilation = null;
-        TimeManager.Instance.SetTimeDilation(TimeDilationSpeed.fastSpeed);
-        loseTimeDilationParticles.Play();
+
+        if (currentlyCollidingTimeDilation != null)
+        {
+            SetToTimeState(currentlyCollidingTimeDilation.speed);
+        }
     }
 
     private void HandleJumpReleased()
@@ -337,8 +339,10 @@ public class Player : MonoBehaviour
         if (timeDilation != null)
         {
             currentlyCollidingTimeDilation = timeDilation;
-            StartCoroutine(RunColorShiftAnimation(currentlyCollidingTimeDilation.GetColor(), 0.5f));
-            TimeManager.Instance.SetTimeDilation(TimeDilationSpeed.normalSpeed);
+            if (currentTimeDilation == null)
+            {
+                SetToTimeState(timeDilation.speed);
+            }
         }
     }
 
@@ -350,11 +354,24 @@ public class Player : MonoBehaviour
             currentlyCollidingTimeDilation = null;
             if (currentTimeDilation == null)
             {
-                StartCoroutine(RunColorShiftAnimation(Color.white, 0.5f));
-                TimeManager.Instance.SetTimeDilation(TimeDilationSpeed.fastSpeed);
-                loseTimeDilationParticles.Play();
+                ResetTimeState();
             }
         }
+    }
+
+    private void SetToTimeState(TimeDilationSpeed speed)
+    {
+
+        Color newColor = speed == TimeDilationSpeed.normalSpeed ? colorPalette.timeDilationNormalSpeed : colorPalette.timeDilationFastSpeed;
+        StartCoroutine(RunColorShiftAnimation(newColor, 0.5f));
+        TimeManager.Instance.SetTimeDilation(speed);
+    }
+
+    private void ResetTimeState()
+    {
+        loseTimeDilationParticles.Play();
+        TimeManager.Instance.ResetTimeToLevelTime();
+        StartCoroutine(RunColorShiftAnimation(Color.white, 0.5f));
     }
 
     private IEnumerator RunColorShiftAnimation(Color targetColor, float duration)

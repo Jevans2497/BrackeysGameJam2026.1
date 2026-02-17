@@ -12,6 +12,11 @@ public class AlphaLaser : MonoBehaviour
         HandleTimeDilationChanged(TimeManager.Instance.currentSpeed);
     }
 
+    private void OnDisable()
+    {
+        TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
+    }
+
     private void HandleTimeDilationChanged(TimeDilationSpeed newSpeed)
     {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
