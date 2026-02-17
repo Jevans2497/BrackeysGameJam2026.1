@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     float moveInput;
     float jumpInput;
     bool consumeInput;
+    bool resetInput;
+    float resetInputHeldCounter;
 
     PlayerInputActions input;
 
@@ -73,6 +75,12 @@ public class Player : MonoBehaviour
     {
         originalScale = transform.localScale;
         jumpableLayers.AddRange(new LayerMask[] { groundLayer });
+        LevelManager.Instance.OnResetLevel += Reset;
+    }
+
+    private void OnDisable()
+    {
+        LevelManager.Instance.OnResetLevel -= Reset;
     }
 
     void Update()
@@ -89,6 +97,7 @@ public class Player : MonoBehaviour
         HandleFalling();
         HandleLandingEffects();
         HandleConsumeInput();
+        HandleResetInput();
         HandleElectrifiedPlatform();
         velocityLastFrame = rb.linearVelocity;
         wasGroundedLastFrame = IsGrounded();
@@ -100,12 +109,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Reset()
+    {
+        transform.position = LevelManager.Instance.GetCurrentSpawnPoint().position;
+        ReleaseTimeDilation();
+    }
+
     private void ReadInput()
     {
         moveInput = input.Player.Move.ReadValue<Vector2>().x;
         jumpInput = input.Player.Jump.ReadValue<Vector2>().y;
         jumpReleased = jumpInput < 0.1f;
         consumeInput = input.Player.Consume.IsPressed();
+        resetInput = input.Player.Reset.IsPressed();
     }
 
     private void HandleMoveInput()
@@ -149,7 +165,6 @@ public class Player : MonoBehaviour
         bool canJump = (IsGrounded() || coyoteTimeTimer > 0f) && jumpDelayTimer <= 0f && isJumpEnabled;
         if (userPressedJump && canJump)
         {
-            Debug.Log("Jumped");
             StartCoroutine(SquashAndStretch());
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JUMP_FORCE);
             jumpDelayTimer = JUMP_DELAY;
@@ -169,10 +184,27 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void HandleResetInput()
+    {
+        if (resetInput)
+        {
+            resetInputHeldCounter += Time.fixedDeltaTime;
+            if (resetInputHeldCounter >= 0.4f)
+            {
+                LevelManager.Instance.ResetLevel();
+                resetInputHeldCounter = 0.0f;
+            }
+        }
+        else
+        {
+            resetInputHeldCounter = 0.0f;
+        }
+    }
+
     private void ConsumeTimeDilation()
     {
         SetToTimeState(currentlyCollidingTimeDilation.speed);
-        currentlyCollidingTimeDilation.Consume(transform);
+        currentlyCollidingTimeDilation.Consume(this);
         currentTimeDilation = currentlyCollidingTimeDilation;
         currentlyCollidingTimeDilation = null;
     }
@@ -321,7 +353,7 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("GammaLaser") || other.gameObject.layer == LayerMask.NameToLayer("DeathLine"))
         {
-            Debug.Log("Dead");
+            LevelManager.Instance.ResetLevel();
         }
     }
 
@@ -386,5 +418,10 @@ public class Player : MonoBehaviour
             yield return null;
         }
         sr.color = targetColor;
+    }
+
+    public Transform GetCurrentTransform()
+    {
+        return transform;
     }
 }

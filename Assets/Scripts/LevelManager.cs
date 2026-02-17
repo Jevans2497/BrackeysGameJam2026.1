@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class LevelManager : MonoBehaviour
     public Level lastLevelInstance;
 
     public float levelSeparationXDistance = 20.0f;
+
+    public Action OnResetLevel;
 
     int currentLevelIndex = 0;
 
@@ -63,5 +66,15 @@ public class LevelManager : MonoBehaviour
     {
         currentLevelIndex--;
         LevelCameraController.Instance.MoveCameraToLevel(currentLevelIndex);
+    }
+
+    public Transform GetCurrentSpawnPoint()
+    {
+        return currentLevel.playerSpawnPoint;
+    }
+
+    public void ResetLevel()
+    {
+        OnResetLevel?.Invoke();
     }
 }

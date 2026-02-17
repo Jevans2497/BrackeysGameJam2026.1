@@ -7,8 +7,7 @@ public class Level : MonoBehaviour
     private LevelCompleteTriggerLine levelCompleteTriggerLineInstance;
     public int levelNumber;
     public TimeDilationSpeed levelSpeed;
-    public float playerSpawnPointX;
-    public float playerSpawnPointY;
+    public Transform playerSpawnPoint;
 
     public void SetupLevel()
     {
