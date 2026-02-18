@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
 
     private void Reset()
     {
-        transform.position = LevelManager.Instance.GetCurrentSpawnPoint().position;
+        transform.position = LevelManager.Instance.GetCurrentSpawnPoint();
         ReleaseTimeDilation();
     }
 

@@ -7,7 +7,7 @@ public class FallingBox : MonoBehaviour
 
     private float defaultAnimationSpeed = 2f;
     private float currentAnimationSpeed;
-    private float initialY = 10f;
+    private float initialY = 7.5f;
     private const float SPEED_MULTIPLIER = 5F;
 
     private void Start()
@@ -24,11 +24,6 @@ public class FallingBox : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // if (transform.position.y < -initialY)
-        // {
-        //     transform.position = new Vector3(transform.position.x, initialY, transform.position.z);
-        // }
-
         transform.position -= new Vector3(0, currentAnimationSpeed * Time.fixedDeltaTime, 0);
     }
 

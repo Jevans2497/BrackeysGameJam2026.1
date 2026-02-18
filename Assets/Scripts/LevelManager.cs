@@ -15,6 +15,9 @@ public class LevelManager : MonoBehaviour
 
     public float levelSeparationXDistance = 20.0f;
 
+    public bool inDebugMode = false;
+    public TimeDilationSpeed debugDilationSpeed;
+
     public Action OnResetLevel;
 
     int currentLevelIndex = 0;
@@ -44,6 +47,12 @@ public class LevelManager : MonoBehaviour
 
     private void LoadCurrentLevel()
     {
+        if (inDebugMode)
+        {
+            TimeManager.Instance.SetTimeDilationForLevel(debugDilationSpeed);
+            return;
+        }
+
         if (nextLevelInstance)
         {
             currentLevelInstance = nextLevelInstance;
@@ -83,9 +92,9 @@ public class LevelManager : MonoBehaviour
             Destroy(lastLevelInstance.gameObject);
     }
 
-    public Transform GetCurrentSpawnPoint()
+    public Vector3 GetCurrentSpawnPoint()
     {
-        return currentLevel.playerSpawnPoint;
+        return currentLevel.playerSpawnPoint.position + new Vector3(currentLevelIndex * levelSeparationXDistance, 0, 0);
     }
 
     public void ResetLevel()
