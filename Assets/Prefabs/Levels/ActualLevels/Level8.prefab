@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2511871779003608251}
   - component: {fileID: 1896675874467277599}
   m_Layer: 0
-  m_Name: Level9
+  m_Name: Level8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Level
   LevelCompleteTriggerLinePrefab: {fileID: 2068376780722357454, guid: fb302754d62fb41a7abbb4777a62f675, type: 3}
   levelBackWallPrefab: {fileID: 3925953867808269717, guid: afbedea86f74c4357bfc1e73c8947b47, type: 3}
-  levelNumber: 9
+  levelNumber: 8
   levelSpeed: 1
   playerSpawnPoint: {fileID: 8126233106191552035}
 --- !u!1001 &191957868604565179
