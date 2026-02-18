@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
     private const float JUMP_FORCE = 13f;
     private const float JUMP_DELAY = 0.3f;
     private float jumpDelayTimer = 0.0f;
-    private const float COYOTE_TIME = 0.15f;
+    private const float COYOTE_TIME = 0.10f;
     private float coyoteTimeTimer;
     private const float JUMP_BUFFER_TIME = 0.1f;
     private float jumpBufferTimer = 0.0f;

@@ -14,6 +14,7 @@ public class FallingBox : MonoBehaviour
 
     private Collider2D fallingBoxCollider;
 
+    private Vector3 initialPosition;
 
     private void Start()
     {
@@ -22,11 +23,16 @@ public class FallingBox : MonoBehaviour
 
         TimeManager.Instance.OnTimeDilationChange += HandleTimeDilationChanged;
         HandleTimeDilationChanged(TimeManager.Instance.currentSpeed);
+
+        LevelManager.Instance.OnResetLevel += ResetFallingBox;
+
+        initialPosition = this.transform.position;
     }
 
     private void OnDisable()
     {
         TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
+        LevelManager.Instance.OnResetLevel -= ResetFallingBox;
     }
 
     private void FixedUpdate()
@@ -72,6 +78,11 @@ public class FallingBox : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void ResetFallingBox()
+    {
+        this.transform.position = initialPosition;
     }
 
 }
