@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FallingBox : MonoBehaviour
 {
+    [SerializeField] private Transform groundCheck;
+
     [SerializeField] ColorPalette colorPalette;
     private SpriteRenderer sr;
 
@@ -10,9 +12,14 @@ public class FallingBox : MonoBehaviour
     private float initialY = 7.5f;
     private const float SPEED_MULTIPLIER = 5F;
 
+    private Collider2D fallingBoxCollider;
+
+
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        fallingBoxCollider = GetComponent<Collider2D>();
+
         TimeManager.Instance.OnTimeDilationChange += HandleTimeDilationChanged;
         HandleTimeDilationChanged(TimeManager.Instance.currentSpeed);
     }
@@ -24,7 +31,10 @@ public class FallingBox : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position -= new Vector3(0, currentAnimationSpeed * Time.fixedDeltaTime, 0);
+        if (!IsGrounded())
+        {
+            transform.position -= new Vector3(0, currentAnimationSpeed * Time.fixedDeltaTime, 0);
+        }
     }
 
     private void HandleTimeDilationChanged(TimeDilationSpeed newSpeed)
@@ -49,4 +59,19 @@ public class FallingBox : MonoBehaviour
             transform.position = new Vector3(transform.position.x, initialY, transform.position.z);
         }
     }
+
+    private bool IsGrounded()
+    {
+        int groundLayerMask = 1 << LayerMask.NameToLayer("Ground");
+        Collider2D[] hits = Physics2D.OverlapCircleAll(groundCheck.position, 0.05f, groundLayerMask);
+
+        foreach (var hit in hits)
+        {
+            if (hit != fallingBoxCollider)
+                return true;
+        }
+
+        return false;
+    }
+
 }
