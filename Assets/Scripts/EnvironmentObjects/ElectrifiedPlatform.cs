@@ -16,6 +16,12 @@ public class ElectrifiedPlatform : MonoBehaviour
         // StartCoroutine(RunAnimation());
     }
 
+    private void OnDisable()
+    {
+        TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
+
+    }
+
     private void HandleTimeDilationChanged(TimeDilationSpeed newSpeed)
     {
         switch (newSpeed)

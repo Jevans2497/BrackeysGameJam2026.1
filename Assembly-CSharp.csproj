@@ -62,6 +62,7 @@
     <Compile Include="Assets/Scripts/TimeDilation.cs" />
     <Compile Include="Assets/Scripts/LevelManager.cs" />
     <Compile Include="Assets/Scripts/TimeManager.cs" />
+    <Compile Include="Assets/Scripts/LevelBackWall.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

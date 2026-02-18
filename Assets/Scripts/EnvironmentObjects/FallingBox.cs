@@ -17,6 +17,11 @@ public class FallingBox : MonoBehaviour
         HandleTimeDilationChanged(TimeManager.Instance.currentSpeed);
     }
 
+    private void OnDisable()
+    {
+        TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
+    }
+
     private void FixedUpdate()
     {
         // if (transform.position.y < -initialY)

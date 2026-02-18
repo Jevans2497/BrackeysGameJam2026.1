@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Level
   LevelCompleteTriggerLinePrefab: {fileID: 2068376780722357454, guid: fb302754d62fb41a7abbb4777a62f675, type: 3}
+  levelBackWallPrefab: {fileID: 3925953867808269717, guid: afbedea86f74c4357bfc1e73c8947b47, type: 3}
   levelNumber: 0
   levelSpeed: 1
-  playerSpawnPointX: -7
-  playerSpawnPointY: -2.354857
+  playerSpawnPoint: {fileID: 1892961181005661350, guid: dba1ac6919dd1426585628e38b0626c9, type: 3}
 --- !u!1001 &4722051446966486493
 PrefabInstance:
   m_ObjectHideFlags: 0

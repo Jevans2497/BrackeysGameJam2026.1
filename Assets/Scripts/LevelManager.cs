@@ -7,11 +7,11 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     public Player player;
-    // public GameObject levelsParent;
     public List<Level> levels;
-    public Level currentLevel;
-    public Level currentLevelInstance;
-    public Level lastLevelInstance;
+    private Level currentLevel;
+    private Level currentLevelInstance;
+    private Level lastLevelInstance;
+    private Level nextLevelInstance;
 
     public float levelSeparationXDistance = 20.0f;
 
@@ -30,7 +30,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         currentLevel = levels[currentLevelIndex];
-        InstantiateLevel();
+        LoadCurrentLevel();
     }
 
     public void AdvanceLevel()
@@ -39,13 +39,26 @@ public class LevelManager : MonoBehaviour
         currentLevelIndex++;
         Level nextLevel = levels[currentLevelIndex];
         currentLevel = nextLevel;
-        InstantiateLevel();
+        LoadCurrentLevel();
     }
 
-    private void InstantiateLevel()
+    private void LoadCurrentLevel()
     {
-        currentLevelInstance = Instantiate(currentLevel, new Vector3(currentLevelIndex * levelSeparationXDistance, 0.0f, 0.0f), Quaternion.identity);
-        currentLevelInstance.SetupLevel();
+        if (nextLevelInstance)
+        {
+            currentLevelInstance = nextLevelInstance;
+            LoadNextLevelIfNeeded();
+        }
+        else
+        {
+            if (currentLevelIndex + 1 < levels.Count)
+            {
+                currentLevelInstance = Instantiate(currentLevel, new Vector3(currentLevelIndex * levelSeparationXDistance, 0.0f, 0.0f), Quaternion.identity);
+                currentLevelInstance.SetupLevel();
+                LoadNextLevelIfNeeded();
+            }
+        }
+
         TimeManager.Instance.SetTimeDilationForLevel(currentLevelInstance.levelSpeed);
         LevelCameraController.Instance.MoveCameraToLevel(currentLevelIndex);
 
@@ -55,17 +68,19 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void LoadNextLevelIfNeeded()
+    {
+        if (currentLevelIndex + 1 >= levels.Count) return;
+        Level nextLevel = levels[currentLevelIndex + 1];
+        nextLevelInstance = Instantiate(nextLevel, new Vector3((currentLevelIndex + 1) * levelSeparationXDistance, 0.0f, 0.0f), Quaternion.identity);
+        nextLevelInstance.SetupLevel();
+    }
+
     private IEnumerator DestroyLastLevel()
     {
         yield return new WaitForSeconds(2.0f);
         if (lastLevelInstance != null)
             Destroy(lastLevelInstance.gameObject);
-    }
-
-    public void GoBackLevel()
-    {
-        currentLevelIndex--;
-        LevelCameraController.Instance.MoveCameraToLevel(currentLevelIndex);
     }
 
     public Transform GetCurrentSpawnPoint()
