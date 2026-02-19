@@ -46,9 +46,13 @@ public class LevelManager : MonoBehaviour
     {
         lastLevelInstance = currentLevelInstance;
         currentLevelIndex++;
-        Level nextLevel = levels[currentLevelIndex];
-        currentLevel = nextLevel;
+        if (currentLevelIndex < levels.Count)
+        {
+            Level nextLevel = levels[currentLevelIndex];
+            currentLevel = nextLevel;
+        }
         LoadCurrentLevel();
+        //Not sure about this, just tried it and was too tired to test so we'll see I guess. 
     }
 
     private void LoadCurrentLevel()

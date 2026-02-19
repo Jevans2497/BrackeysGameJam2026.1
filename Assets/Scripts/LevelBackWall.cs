@@ -6,7 +6,6 @@ public class LevelBackWall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enetered back wall");
         Player player = collision.GetComponent<Player>();
         enteredLeft = false;
         if (player != null)
@@ -19,14 +18,11 @@ public class LevelBackWall : MonoBehaviour
             {
                 DisableCollider();
             }
-
-
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Exit back wall");
         Player player = collision.GetComponent<Player>();
         if (player != null)
         {
