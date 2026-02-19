@@ -16,15 +16,20 @@ public class FallingBox : MonoBehaviour
 
     private Vector3 initialPosition;
 
+    public bool waitingForFinalLevelTrigger = false;
+    private bool initialWaitingForFinalLevelTriggerValue = false;
+
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         fallingBoxCollider = GetComponent<Collider2D>();
+        initialWaitingForFinalLevelTriggerValue = waitingForFinalLevelTrigger;
 
         TimeManager.Instance.OnTimeDilationChange += HandleTimeDilationChanged;
         HandleTimeDilationChanged(TimeManager.Instance.currentSpeed);
 
         LevelManager.Instance.OnResetLevel += ResetFallingBox;
+        LevelManager.Instance.OnFinalLevelTriggerFallingBoxes += TriggerFinalLevelFallingBoxes;
 
         initialPosition = this.transform.position;
     }
@@ -33,10 +38,12 @@ public class FallingBox : MonoBehaviour
     {
         TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
         LevelManager.Instance.OnResetLevel -= ResetFallingBox;
+        LevelManager.Instance.OnFinalLevelTriggerFallingBoxes -= TriggerFinalLevelFallingBoxes;
     }
 
     private void FixedUpdate()
     {
+        if (waitingForFinalLevelTrigger) return;
         if (!IsGrounded())
         {
             transform.position -= new Vector3(0, currentAnimationSpeed * Time.fixedDeltaTime, 0);
@@ -83,6 +90,11 @@ public class FallingBox : MonoBehaviour
     private void ResetFallingBox()
     {
         this.transform.position = initialPosition;
+        waitingForFinalLevelTrigger = initialWaitingForFinalLevelTriggerValue;
     }
 
+    private void TriggerFinalLevelFallingBoxes()
+    {
+        waitingForFinalLevelTrigger = false;
+    }
 }

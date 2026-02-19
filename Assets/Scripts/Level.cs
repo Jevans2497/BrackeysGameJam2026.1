@@ -16,13 +16,16 @@ public class Level : MonoBehaviour
     {
         transform.position = Vector3.zero + new Vector3(levelNumber * LevelManager.Instance.levelSeparationXDistance, 0, 0);
 
-        float baseXDistance = LevelManager.Instance.levelSeparationXDistance;
-        float levelTriggerXPos = baseXDistance * levelNumber + 8.0f;
-        GameObject levelTriggerGO = Instantiate(LevelCompleteTriggerLinePrefab, new Vector3(levelTriggerXPos, 0.0f, 0.0f), Quaternion.identity);
-        levelCompleteTriggerLineInstance = levelTriggerGO.GetComponent<LevelCompleteTriggerLine>();
+        if (levelNumber != 9)
+        {
+            float baseXDistance = LevelManager.Instance.levelSeparationXDistance;
+            float levelTriggerXPos = baseXDistance * levelNumber + 8.0f;
+            GameObject levelTriggerGO = Instantiate(LevelCompleteTriggerLinePrefab, new Vector3(levelTriggerXPos, 0.0f, 0.0f), Quaternion.identity);
+            levelCompleteTriggerLineInstance = levelTriggerGO.GetComponent<LevelCompleteTriggerLine>();
 
-        float backWallXPos = baseXDistance * levelNumber - 10.5f;
-        GameObject backWallGO = Instantiate(levelBackWallPrefab, new Vector3(backWallXPos, 0.0f, 0.0f), Quaternion.identity);
+            float backWallXPos = baseXDistance * levelNumber - 10.5f;
+            GameObject backWallGO = Instantiate(levelBackWallPrefab, new Vector3(backWallXPos, 0.0f, 0.0f), Quaternion.identity);
+        }
     }
 
     private void OnDestroy()

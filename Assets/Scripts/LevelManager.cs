@@ -16,9 +16,14 @@ public class LevelManager : MonoBehaviour
     public float levelSeparationXDistance = 20.0f;
 
     public bool inDebugMode = false;
+    public bool isDebuggingFinalLevel = false;
     public TimeDilationSpeed debugDilationSpeed;
 
     public Action OnResetLevel;
+    public Action OnFinalLevelTriggerGammaLasers;
+    public Action OnFinalLevelTriggerFallingBoxes;
+    public Action OnFinalLevelTriggerCameraShift;
+    public Action OnResetGame;
 
     int currentLevelIndex = 0;
 
@@ -100,5 +105,21 @@ public class LevelManager : MonoBehaviour
     public void ResetLevel()
     {
         OnResetLevel?.Invoke();
+    }
+
+    public bool isFinalLevel()
+    {
+        return currentLevelIndex >= levels.Count || isDebuggingFinalLevel;
+    }
+
+    public void TriggerInitialFinalLevelEvent()
+    {
+        OnFinalLevelTriggerGammaLasers?.Invoke();
+        OnFinalLevelTriggerCameraShift?.Invoke();
+    }
+
+    public void TriggerFinalLevelFallingBoxes()
+    {
+        OnFinalLevelTriggerFallingBoxes?.Invoke();
     }
 }

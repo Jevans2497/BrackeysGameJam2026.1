@@ -176,6 +176,10 @@ public class Player : MonoBehaviour
         if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null)
         {
             ConsumeTimeDilation();
+            if (LevelManager.Instance.isFinalLevel())
+            {
+                LevelManager.Instance.TriggerInitialFinalLevelEvent();
+            }
         }
 
         if (!consumeInput && currentTimeDilation != null)
