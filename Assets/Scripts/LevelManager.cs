@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -109,7 +110,7 @@ public class LevelManager : MonoBehaviour
 
     public bool isFinalLevel()
     {
-        return currentLevelIndex >= levels.Count || isDebuggingFinalLevel;
+        return currentLevelIndex == levels.Last().levelNumber || isDebuggingFinalLevel;
     }
 
     public void TriggerInitialFinalLevelEvent()
