@@ -4922,3 +4922,5 @@ MonoBehaviour:
   particleSystem: {fileID: 3349654798509464422}
   colorPalette: {fileID: 11400000, guid: aab4734bf8eff4a19aa8cdffb39f3cef, type: 2}
   speed: 1
+  TimeDilationNormalSpeedSFX: {fileID: 8300000, guid: 01e7c9ffb198849aebd02264e9a6f5de, type: 3}
+  TimeDilationFastSpeedSFX: {fileID: 8300000, guid: b9616e67d55f54c03b59102cf9705627, type: 3}

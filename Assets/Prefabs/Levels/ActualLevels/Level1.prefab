@@ -215,6 +215,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
+      propertyPath: attachedToLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: nextChainedGammaLaser
       value: 
       objectReference: {fileID: 4986740404788705630}
@@ -305,6 +309,10 @@ PrefabInstance:
       value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
+      propertyPath: attachedToLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: isLeaderGammaLaser
       value: 0
       objectReference: {fileID: 0}
@@ -390,6 +398,10 @@ PrefabInstance:
       value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
+      propertyPath: attachedToLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: isLeaderGammaLaser
       value: 0
       objectReference: {fileID: 0}
@@ -469,6 +481,10 @@ PrefabInstance:
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: initialDelay
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
+      propertyPath: attachedToLevel
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: isLeaderGammaLaser
@@ -616,6 +632,10 @@ PrefabInstance:
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: initialDelay
       value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
+      propertyPath: attachedToLevel
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: isLeaderGammaLaser

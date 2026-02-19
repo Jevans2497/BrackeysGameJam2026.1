@@ -127,4 +127,9 @@ public class LevelManager : MonoBehaviour
     {
         OnFinalLevelTriggerFallingBoxes?.Invoke();
     }
+
+    public int GetCurrentLevelIndex()
+    {
+        return currentLevelIndex;
+    }
 }

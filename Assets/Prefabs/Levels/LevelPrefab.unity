@@ -10204,6 +10204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManager
   currentSpeed: 0
+  speedTimeSFX: {fileID: 8300000, guid: b9616e67d55f54c03b59102cf9705627, type: 3}
+  slowTimeSFX: {fileID: 8300000, guid: 01e7c9ffb198849aebd02264e9a6f5de, type: 3}
 --- !u!4 &673251041
 Transform:
   m_ObjectHideFlags: 0
@@ -10849,6 +10851,53 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1329640733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329640735}
+  - component: {fileID: 1329640734}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1329640734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329640733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7da13269f89d472c8014272d70595ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXManager
+  sfxPrefab: {fileID: 2624639592282619371, guid: b1e3cdc921987457b9cbb692dd5048c1, type: 3}
+  poolSize: 10
+  pitchVariance: 0.05
+--- !u!4 &1329640735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329640733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100.19512, y: -106.76901, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1339499538
 GameObject:
   m_ObjectHideFlags: 0
@@ -26098,3 +26147,4 @@ SceneRoots:
   - {fileID: 770620629}
   - {fileID: 5028132748398624140}
   - {fileID: 1278295354}
+  - {fileID: 1329640735}

@@ -106,6 +106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GammaLaser
   initialDelay: 0
+  waitingForFinalLevelTrigger: 0
+  gammaLaserSFX: {fileID: 8300000, guid: 7588de63a65ed456ab693bff4d2f8337, type: 3}
+  attachedToLevel: 0
 --- !u!61 &1431170119409858630
 BoxCollider2D:
   m_ObjectHideFlags: 0

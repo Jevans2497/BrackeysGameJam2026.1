@@ -13,6 +13,9 @@ public class TimeManager : MonoBehaviour
     private TimeDilationSpeed levelSpeed;
     public Action<TimeDilationSpeed> OnTimeDilationChange;
 
+    public AudioClip speedTimeSFX;
+    public AudioClip slowTimeSFX;
+
     private void Awake()
     {
         if (Instance == null)
@@ -28,8 +31,25 @@ public class TimeManager : MonoBehaviour
 
     public void SetTimeDilation(TimeDilationSpeed speed)
     {
-        currentSpeed = speed;
-        OnTimeDilationChange?.Invoke(speed);
+        if (currentSpeed != speed)
+        {
+            currentSpeed = speed;
+            PlayTimeDilationSFX();
+            OnTimeDilationChange?.Invoke(speed);
+        }
+    }
+
+    private void PlayTimeDilationSFX()
+    {
+        switch (currentSpeed)
+        {
+            case TimeDilationSpeed.normalSpeed:
+                SFXManager.Instance.PlaySFX(slowTimeSFX, 0.0f, 1.0f, false);
+                break;
+            case TimeDilationSpeed.fastSpeed:
+                SFXManager.Instance.PlaySFX(speedTimeSFX, 0.0f, 1.0f, false);
+                break;
+        }
     }
 
     public void SetTimeDilationForLevel(TimeDilationSpeed speed)

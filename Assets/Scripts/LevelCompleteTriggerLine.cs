@@ -3,6 +3,8 @@ using UnityEngine;
 public class LevelCompleteTriggerLine : MonoBehaviour
 {
 
+    public AudioClip levelCompleteSFX;
+
     private bool enteredLeft = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -12,6 +14,7 @@ public class LevelCompleteTriggerLine : MonoBehaviour
         if (player != null)
         {
             player.ReleaseTimeDilation();
+            SFXManager.Instance.PlaySFX(levelCompleteSFX, 0.0f, 5f, false);
             if (player.isFacingRight)
                 enteredLeft = true;
         }

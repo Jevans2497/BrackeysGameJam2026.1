@@ -550,6 +550,10 @@ PrefabInstance:
       propertyPath: initialDelay
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
+      propertyPath: attachedToLevel
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

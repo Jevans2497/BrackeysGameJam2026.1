@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8de4c7c51a8e446f93bb98f8dfba8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelCompleteTriggerLine
+  levelCompleteSFX: {fileID: 8300000, guid: 08e594b9e87cf42f0b2b80ea6280a3f1, type: 3}
 --- !u!212 &3390599752519843240
 SpriteRenderer:
   serializedVersion: 2

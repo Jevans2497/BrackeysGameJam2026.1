@@ -58,6 +58,7 @@
     <Compile Include="Assets/Scripts/CameraShake.cs" />
     <Compile Include="Assets/Scripts/LevelCompleteTriggerLine.cs" />
     <Compile Include="Assets/Scripts/EnvironmentObjects/GammaLaser.cs" />
+    <Compile Include="Assets/Scripts/SFXManager.cs" />
     <Compile Include="Assets/Scripts/EnvironmentObjects/ElectrifiedPlatform.cs" />
     <Compile Include="Assets/Scripts/MusicManager.cs" />
     <Compile Include="Assets/Scripts/FinalLevelFallingBoxColliderTrigger.cs" />

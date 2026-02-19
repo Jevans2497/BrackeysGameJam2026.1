@@ -17,6 +17,7 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         TimeManager.Instance.OnTimeDilationChange += SetMusicSpeed;
+        SetMusicToFastSpeed();
     }
 
     private void OnDestroy()

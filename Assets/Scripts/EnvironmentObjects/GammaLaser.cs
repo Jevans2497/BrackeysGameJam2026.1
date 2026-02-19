@@ -10,6 +10,8 @@ public class GammaLaser : MonoBehaviour
     private const float SPEED_MULTIPLIER = 10F;
     public float initialDelay = 0.0f;
     public bool waitingForFinalLevelTrigger = false;
+    public AudioClip gammaLaserSFX;
+    public int attachedToLevel;
 
     private Vector3 initialPosition;
     private float initialDelayForReset;
@@ -44,6 +46,7 @@ public class GammaLaser : MonoBehaviour
         }
         if (transform.position.y < -initialY)
         {
+            PlayGammaLaserSFX();
             transform.position = new Vector3(transform.position.x, initialY, transform.position.z);
         }
 
@@ -73,5 +76,18 @@ public class GammaLaser : MonoBehaviour
     private void TriggerFinalLevel()
     {
         waitingForFinalLevelTrigger = false;
+    }
+
+    private void PlayGammaLaserSFX()
+    {
+        if (LevelManager.Instance.GetCurrentLevelIndex() == attachedToLevel)
+            if (TimeManager.Instance.currentSpeed == TimeDilationSpeed.normalSpeed)
+            {
+                SFXManager.Instance.PlaySFX(gammaLaserSFX, -0.3f, 0.125f);
+            }
+            else
+            {
+                SFXManager.Instance.PlaySFX(gammaLaserSFX, 0.0f, 0.125f);
+            }
     }
 }
