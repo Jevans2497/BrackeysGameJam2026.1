@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
+
     [SerializeField] private ColorPalette colorPalette;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask electrifiedPlatformLayer;
@@ -30,6 +32,7 @@ public class Player : MonoBehaviour
     float resetInputHeldCounter;
 
     PlayerInputActions input;
+    public bool isInputEnabled = true;
 
     //MOVEMENT
     private const float MAX_SPEED = 10f;
@@ -63,6 +66,11 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
@@ -85,7 +93,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        ReadInput();
+        if (isInputEnabled)
+        {
+            ReadInput();
+        }
     }
 
     void FixedUpdate()
@@ -427,5 +438,19 @@ public class Player : MonoBehaviour
     public Transform GetCurrentTransform()
     {
         return transform;
+    }
+
+    public void DisableInput()
+    {
+        isInputEnabled = false;
+        moveInput = 0.0f;
+        jumpInput = 0.0f;
+        consumeInput = false;
+        resetInput = false;
+    }
+
+    public void EnableInput()
+    {
+        isInputEnabled = true;
     }
 }
