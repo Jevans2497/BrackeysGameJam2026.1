@@ -41,9 +41,6 @@ Transform:
   - {fileID: 1144134916049663650}
   - {fileID: 5555986997560064667}
   - {fileID: 4569243496589775166}
-  - {fileID: 3730583499406935745}
-  - {fileID: 6182540877494786023}
-  - {fileID: 119101345812016627}
   - {fileID: 7992101053105473661}
   m_Father: {fileID: 3809030465648824354}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -332,6 +329,7 @@ Transform:
   - {fileID: 7127503047533550123}
   - {fileID: 2305896862901998726}
   - {fileID: 8534471015002094697}
+  - {fileID: 909412590628488167}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3318023720260654639
@@ -440,7 +438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -518,7 +516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -678,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -956,6 +954,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2228136006420426878, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
+      propertyPath: attachedToLevelNumber
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1024,7 +1026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -1171,6 +1173,10 @@ PrefabInstance:
       value: FallingBox (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
+      propertyPath: attachedToLevelNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
       propertyPath: waitingForFinalLevelTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -1242,7 +1248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -1261,72 +1267,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 571556223604646232, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
   m_PrefabInstance: {fileID: 1272785732841877034}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1640592930494292025
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7127503047533550123}
-    m_Modifications:
-    - target: {fileID: 1383254631972427861, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_Name
-      value: AlphaLaser (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.6860569
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 103.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.5129
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
---- !u!4 &119101345812016627 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
-  m_PrefabInstance: {fileID: 1640592930494292025}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1744329414753864379
 PrefabInstance:
@@ -1386,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -1460,7 +1400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -1538,7 +1478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -1842,7 +1782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -1920,7 +1860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2083,6 +2023,10 @@ PrefabInstance:
       value: FallingBox
       objectReference: {fileID: 0}
     - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
+      propertyPath: attachedToLevelNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
       propertyPath: waitingForFinalLevelTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -2154,7 +2098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2232,7 +2176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2310,7 +2254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2388,7 +2332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2407,68 +2351,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 571556223604646232, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
   m_PrefabInstance: {fileID: 3049666087395144888}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3316551103938167878
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7127503047533550123}
-    m_Modifications:
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 101.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3447558381847516970, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_Name
-      value: ElectrifiedPlatform
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
---- !u!4 &3730583499406935745 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-  m_PrefabInstance: {fileID: 3316551103938167878}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3362921675433649697
 PrefabInstance:
@@ -2672,7 +2554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2750,7 +2632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2906,7 +2788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -2991,6 +2873,10 @@ PrefabInstance:
       value: FallingBox (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
+      propertyPath: attachedToLevelNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
       propertyPath: waitingForFinalLevelTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -3062,7 +2948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3140,7 +3026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3218,7 +3104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3296,7 +3182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3452,7 +3338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3530,7 +3416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3608,7 +3494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3686,7 +3572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3705,68 +3591,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 571556223604646232, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
   m_PrefabInstance: {fileID: 4917298177546826287}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5192576078410356064
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7127503047533550123}
-    m_Modifications:
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 99.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.871
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3447558381847516970, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-      propertyPath: m_Name
-      value: ElectrifiedPlatform (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
---- !u!4 &6182540877494786023 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2144681290870260359, guid: 795f659a2ef7a408bbc592334ba58cde, type: 3}
-  m_PrefabInstance: {fileID: 5192576078410356064}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5322436847203125833
 PrefabInstance:
@@ -3826,7 +3650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -3904,7 +3728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4044,7 +3868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4122,7 +3946,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4278,7 +4102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4356,7 +4180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4439,6 +4263,10 @@ PrefabInstance:
     - target: {fileID: 6395612707718818086, guid: 55288511268174fce9f85465d3834b2a, type: 3}
       propertyPath: m_Name
       value: FallingBox (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
+      propertyPath: attachedToLevelNumber
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
       propertyPath: waitingForFinalLevelTrigger
@@ -4636,7 +4464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4776,7 +4604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4854,7 +4682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -4932,7 +4760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5010,7 +4838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5088,7 +4916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5173,6 +5001,10 @@ PrefabInstance:
       value: FallingBox (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
+      propertyPath: attachedToLevelNumber
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7128753520681164182, guid: 55288511268174fce9f85465d3834b2a, type: 3}
       propertyPath: waitingForFinalLevelTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -5244,7 +5076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5322,7 +5154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5400,7 +5232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5478,7 +5310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5556,7 +5388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5634,7 +5466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5712,7 +5544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5868,7 +5700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -5946,7 +5778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -6032,6 +5864,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1685380458600484298, guid: 1e5185b7d0d2745ef92d59d9cd22b608, type: 3}
   m_PrefabInstance: {fileID: 8379816290140099409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8395484489343421005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3809030465648824354}
+    m_Modifications:
+    - target: {fileID: 30505306039383829, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_text
+      value: There's definitely gonna be something cool at the bottom of this...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840874446950273867, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6745944619524121979, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182397505550596289, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_Name
+      value: DialogueSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450094287167833617, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_text
+      value: Absorb this!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450094287167833617, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450094287167833617, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059658028783603360, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059658028783603360, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+--- !u!4 &909412590628488167 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8654829175446702506, guid: 8e0e56fe683074b7e9ed549d2e8d66a2, type: 3}
+  m_PrefabInstance: {fileID: 8395484489343421005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8431441042165659640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6090,7 +6016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -6246,7 +6172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -6324,7 +6250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -6402,7 +6328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger
@@ -6480,7 +6406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: attachedToLevel
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9147426579909483045, guid: df2c785f33d474e28bf6e402ca702edd, type: 3}
       propertyPath: waitingForLevelTenTrigger

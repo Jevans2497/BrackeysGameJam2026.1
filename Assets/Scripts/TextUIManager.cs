@@ -100,7 +100,7 @@ public class TextUIManager : MonoBehaviour
 
     private IEnumerator RunHideTextAnimation()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1.0f);
 
         float duration = 1.0f;
         float elapsedTime = 0.0f;

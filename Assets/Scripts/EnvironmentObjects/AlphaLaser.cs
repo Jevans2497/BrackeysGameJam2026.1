@@ -42,6 +42,7 @@ public class AlphaLaser : MonoBehaviour
 
     private void PlayAlphaLaserSFX()
     {
+        if (LevelManager.Instance.IsInCredits()) return;
         if (LevelManager.Instance.GetCurrentLevelIndex() == attachedToLevelNumber)
             SFXManager.Instance.PlaySFX(alphaLaserSFX, 0.0f, 0.5f, false, true);
     }

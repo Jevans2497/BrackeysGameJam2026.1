@@ -28,6 +28,8 @@ public class LevelManager : MonoBehaviour
 
     int currentLevelIndex = 0;
 
+    private bool inCredits = false;
+
     private void Awake()
     {
         if (Instance == null)
@@ -142,5 +144,11 @@ public class LevelManager : MonoBehaviour
         TimeManager.Instance.SetTimeDilationForLevel(TimeDilationSpeed.normalSpeed);
         deathLine.SetActive(false);
         finalLevelCamera.SetToCreditsState();
+        inCredits = true;
+    }
+
+    public bool IsInCredits()
+    {
+        return inCredits;
     }
 }

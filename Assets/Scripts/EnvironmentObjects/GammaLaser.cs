@@ -80,6 +80,7 @@ public class GammaLaser : MonoBehaviour
 
     private void PlayGammaLaserSFX()
     {
+        if (LevelManager.Instance.IsInCredits()) return;
         if (LevelManager.Instance.GetCurrentLevelIndex() == attachedToLevel)
             if (TimeManager.Instance.currentSpeed == TimeDilationSpeed.normalSpeed)
             {
