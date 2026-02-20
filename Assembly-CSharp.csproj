@@ -56,6 +56,7 @@
     <Compile Include="Assets/Scripts/FinalLevelReleaseDilationLine.cs" />
     <Compile Include="Assets/Scripts/EnvironmentObjects/FallingBox.cs" />
     <Compile Include="Assets/PlayerInputActions.cs" />
+    <Compile Include="Assets/Scripts/FinalTimeDilation.cs" />
     <Compile Include="Assets/Scripts/CameraShake.cs" />
     <Compile Include="Assets/Scripts/LevelCompleteTriggerLine.cs" />
     <Compile Include="Assets/Scripts/EnvironmentObjects/GammaLaser.cs" />

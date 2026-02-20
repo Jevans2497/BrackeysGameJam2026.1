@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private ParticleSystem loseTimeDilationParticles;
+    [SerializeField] private FinalTimeDilation finalTimeDilation;
 
     //Audio
     [SerializeField] private AudioClip jumpSFX;
@@ -117,6 +118,7 @@ public class Player : MonoBehaviour
         HandleConsumeInput();
         HandleResetInput();
         HandleElectrifiedPlatform();
+        HandleFinalTimeDilation();
         velocityLastFrame = rb.linearVelocity;
         wasGroundedLastFrame = IsGrounded();
 
@@ -129,6 +131,7 @@ public class Player : MonoBehaviour
 
     private void Reset()
     {
+        if (LevelManager.Instance.IsInCredits()) return;
         transform.position = LevelManager.Instance.GetCurrentSpawnPoint();
         ReleaseTimeDilation();
     }
@@ -468,5 +471,13 @@ public class Player : MonoBehaviour
     public void EnableInput()
     {
         isInputEnabled = true;
+    }
+
+    public void HandleFinalTimeDilation()
+    {
+        if (consumeInput && !finalTimeDilation.isBeingConsumed)
+        {
+            finalTimeDilation.Consume();
+        }
     }
 }

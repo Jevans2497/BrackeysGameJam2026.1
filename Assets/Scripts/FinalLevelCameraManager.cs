@@ -1,5 +1,6 @@
 using UnityEngine;
 using Cinemachine;
+using System.Collections;
 
 public class FinalLevelCameraManager : MonoBehaviour
 {
@@ -97,5 +98,48 @@ public class FinalLevelCameraManager : MonoBehaviour
     public void ResetFinalLevelCamera()
     {
         SetFinalCameraYOffset(3.0f);
+    }
+
+    private Coroutine shakeCoroutine;
+    private CinemachineFramingTransposer transposer;
+    private Vector3 originalOffset;
+
+    public void ShakeCamera(float duration, float intensity)
+    {
+        transposer = finalLevelVcam.GetCinemachineComponent<CinemachineFramingTransposer>();
+
+        if (transposer == null)
+        {
+            Debug.LogWarning("FramingTransposer not found!");
+            return;
+        }
+
+        if (shakeCoroutine != null)
+            StopCoroutine(shakeCoroutine);
+
+        shakeCoroutine = StartCoroutine(ShakeRoutine(duration, intensity));
+    }
+
+    private IEnumerator ShakeRoutine(float duration, float intensity)
+    {
+        float elapsed = 0f;
+
+        originalOffset = transposer.m_TrackedObjectOffset;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+
+            float offsetX = Random.Range(-0.1f, 0.1f) * intensity;
+            float offsetY = Random.Range(-0.1f, 0.1f) * intensity;
+
+            transposer.m_TrackedObjectOffset =
+                originalOffset + new Vector3(offsetX, offsetY, 0f);
+
+            yield return null;
+        }
+
+        transposer.m_TrackedObjectOffset = originalOffset;
+        shakeCoroutine = null;
     }
 }
