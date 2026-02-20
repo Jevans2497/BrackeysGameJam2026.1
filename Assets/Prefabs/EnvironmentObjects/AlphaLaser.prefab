@@ -152,3 +152,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlphaLaser
   colorPalette: {fileID: 11400000, guid: aab4734bf8eff4a19aa8cdffb39f3cef, type: 2}
+  alphaLaserSFX: {fileID: 8300000, guid: c4fb250246e0b4f43b257f4d36a1a376, type: 3}
+  attachedToLevelNumber: 0

@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private ParticleSystem loseTimeDilationParticles;
 
+    //Audio
+    [SerializeField] private AudioClip jumpSFX;
+    [SerializeField] private AudioClip landingSFX;
+    [SerializeField] private AudioClip electrifedPlatformJumpSfx;
+
     private List<LayerMask> jumpableLayers = new List<LayerMask>();
 
     Rigidbody2D rb;
@@ -179,6 +184,7 @@ public class Player : MonoBehaviour
             StartCoroutine(SquashAndStretch());
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JUMP_FORCE);
             jumpDelayTimer = JUMP_DELAY;
+            SFXManager.Instance.PlaySFX(jumpSFX, 0.0f, 0.02f, false, false);
         }
     }
 
@@ -257,18 +263,25 @@ public class Player : MonoBehaviour
     {
         if (IsGrounded() && !wasGroundedLastFrame && velocityLastFrame.y < -0.1f)
         {
-            float minVelocity = -20f;
+
+            float minVelocity = -17f;
             float maxVelocity = -35f;
 
-            if (velocityLastFrame.y > minVelocity) return;
+            if (velocityLastFrame.y <= minVelocity)
+            {
+                float normalized = Mathf.Clamp01((Mathf.Abs(velocityLastFrame.y) - Mathf.Abs(minVelocity)) /
+                                                 (Mathf.Abs(maxVelocity) - Mathf.Abs(minVelocity)));
 
-            float normalized = Mathf.Clamp01((Mathf.Abs(velocityLastFrame.y) - Mathf.Abs(minVelocity)) /
-                                             (Mathf.Abs(maxVelocity) - Mathf.Abs(minVelocity)));
+                float duration = 0.1f + 0.05f * normalized;
+                float magnitude = 0.05f + 0.075f * normalized;
 
-            float duration = 0.1f + 0.05f * normalized;
-            float magnitude = 0.05f + 0.075f * normalized;
-
-            CameraShake.Instance.Shake(duration, magnitude);
+                LevelCameraController.Instance.Shake(duration, magnitude);
+                SFXManager.Instance.PlaySFX(landingSFX, 0.0f, 0.05f * ((1 + normalized) / 10.0f), true, false);
+            }
+            else
+            {
+                SFXManager.Instance.PlaySFX(landingSFX, 0.0f, 0.05f, true, false);
+            }
         }
     }
 
@@ -279,6 +292,7 @@ public class Player : MonoBehaviour
         {
             isFallingEnabled = false;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JUMP_FORCE * 1.25f);
+            SFXManager.Instance.PlaySFX(electrifedPlatformJumpSfx, 0.0f, 0.2f, true, false);
         }
     }
 

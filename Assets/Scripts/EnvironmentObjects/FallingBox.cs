@@ -5,7 +5,10 @@ public class FallingBox : MonoBehaviour
     [SerializeField] private Transform groundCheck;
 
     [SerializeField] ColorPalette colorPalette;
+    [SerializeField] private AudioClip fallingBoxSFX;
     private SpriteRenderer sr;
+
+    public int attachedToLevelNumber;
 
     private float defaultAnimationSpeed = 2f;
     private float currentAnimationSpeed;
@@ -18,6 +21,7 @@ public class FallingBox : MonoBehaviour
 
     public bool waitingForFinalLevelTrigger = false;
     private bool initialWaitingForFinalLevelTriggerValue = false;
+
 
     private void Start()
     {
@@ -69,6 +73,10 @@ public class FallingBox : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("DeathLine"))
         {
+            if (LevelManager.Instance.GetCurrentLevelIndex() == attachedToLevelNumber && TimeManager.Instance.currentSpeed == TimeDilationSpeed.fastSpeed)
+            {
+                SFXManager.Instance.PlaySFX(fallingBoxSFX, 0.0f, 0.1f, true, false);
+            }
             transform.position = new Vector3(transform.position.x, initialY, transform.position.z);
         }
     }

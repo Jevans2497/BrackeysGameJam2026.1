@@ -155,6 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FallingBox
   groundCheck: {fileID: 6457819280247707412}
   colorPalette: {fileID: 11400000, guid: aab4734bf8eff4a19aa8cdffb39f3cef, type: 2}
+  fallingBoxSFX: {fileID: 8300000, guid: 841483c3668844da58a0f147ffeb28fc, type: 3}
+  attachedToLevelNumber: 0
+  waitingForFinalLevelTrigger: 0
 --- !u!50 &4288257518398729891
 Rigidbody2D:
   serializedVersion: 5

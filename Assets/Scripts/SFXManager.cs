@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SFXManager : MonoBehaviour
@@ -6,11 +7,9 @@ public class SFXManager : MonoBehaviour
 
     [Header("SFX Settings")]
     [SerializeField] private AudioSource sfxPrefab;
-    [SerializeField] private int poolSize = 10;
     [SerializeField] private float pitchVariance = 0.05f;
 
-    private AudioSource[] pool;
-    private int poolIndex = 0;
+    private List<AudioSource> pool = new List<AudioSource>();
 
     private void Awake()
     {
@@ -22,29 +21,49 @@ public class SFXManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        // Create pool
-        pool = new AudioSource[poolSize];
-        for (int i = 0; i < poolSize; i++)
-        {
-            pool[i] = Instantiate(sfxPrefab, transform);
-        }
     }
 
-    public void PlaySFX(AudioClip clip, float pitchShiftAmount = 0.0f, float volume = 1f, bool isPitchRandomized = true)
+    public void PlaySFX(AudioClip clip, float pitchShiftAmount = 0f, float volume = 1f, bool randomizePitch = true, bool isLoop = false)
     {
         if (clip == null) return;
 
-        AudioSource source = pool[poolIndex];
-        poolIndex = (poolIndex + 1) % pool.Length;
+        AudioSource source = GetAvailableSource();
 
-        if (isPitchRandomized)
-        {
-            source.pitch = 1f + Random.Range(-pitchVariance, pitchVariance);
-        }
+        source.pitch = 1f;
+        source.loop = isLoop;
+        source.volume = volume;
+        source.clip = clip;
+
+        if (randomizePitch)
+            source.pitch += Random.Range(-pitchVariance, pitchVariance);
 
         source.pitch += pitchShiftAmount;
 
-        source.PlayOneShot(clip, volume);
+        source.Play();
+    }
+
+    private AudioSource GetAvailableSource()
+    {
+        foreach (var source in pool)
+        {
+            if (!source.isPlaying)
+                return source;
+        }
+
+        AudioSource newSource = Instantiate(sfxPrefab, transform);
+        pool.Add(newSource);
+
+        return newSource;
+    }
+
+    public void StopClip(AudioClip clip)
+    {
+        foreach (var source in pool)
+        {
+            if (source.isPlaying && source.clip == clip)
+            {
+                source.Stop();
+            }
+        }
     }
 }

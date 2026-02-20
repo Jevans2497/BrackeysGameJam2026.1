@@ -3,21 +3,7 @@ using System.Collections;
 
 public class CameraShake : MonoBehaviour
 {
-    public static CameraShake Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
-    }
-
     private Vector3 originalPos;
-
-    private void Start()
-    {
-    }
 
     public void Shake(float duration, float magnitude)
     {
