@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 44635
+  controlID: 21655
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 44636
+  controlID: 21656
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -794,9 +794,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -1.1052397, y: 2.3541546, z: 0.080036655}
+    m_Target: {x: -1.8134025, y: 3.3985252, z: -0.07449828}
     speed: 2
-    m_Value: {x: -1.1052397, y: 2.3541546, z: 0.080036655}
+    m_Value: {x: -1.8134025, y: 3.3985252, z: -0.07449828}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -846,9 +846,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.0108469
+    m_Target: 2.5672088
     speed: 2
-    m_Value: 3.0108469
+    m_Value: 2.5672088
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1054,8 +1054,8 @@ MonoBehaviour:
     y: 389
     width: 483.5
     height: 302
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 112}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 44589
+  controlID: 21689
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -1106,8 +1106,8 @@ MonoBehaviour:
     y: 0
     width: 582.5
     height: 388.5
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -1155,14 +1155,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs:
-      - m_Data: -256796
+      - m_Data: 62600
       m_LastClickedID:
-        m_Data: -256796
+        m_Data: 62600
       m_ExpandedIDs:
-      - m_Data: -254948
-      - m_Data: 99998
-      - m_Data: 100030
-      - m_Data: 100058
+      - m_Data: -77598
+      - m_Data: -66778
+      - m_Data: 62554
+      - m_Data: 62576
+      - m_Data: 62636
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1264,7 +1265,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Levels/ActualLevels
+    - Packages/com.unity.collab-proxy/Editor/Developer
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1274,45 +1275,45 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/Levels/ActualLevels
+  - Packages/com.unity.collab-proxy/Editor/Developer
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/jevans/Desktop/BrackeysJam2026
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 2143.5}
     m_SelectedIDs:
-    - m_Data: 53658
+    - m_Data: 52592
     m_LastClickedID:
-      m_Data: 53658
+      m_Data: 52592
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51692
-    - m_Data: 51694
-    - m_Data: 51696
-    - m_Data: 51698
-    - m_Data: 51700
-    - m_Data: 51702
-    - m_Data: 51704
-    - m_Data: 51706
-    - m_Data: 51708
-    - m_Data: 51710
-    - m_Data: 51712
-    - m_Data: 51714
-    - m_Data: 51716
-    - m_Data: 51718
-    - m_Data: 51720
-    - m_Data: 51722
-    - m_Data: 51724
-    - m_Data: 51726
-    - m_Data: 52034
-    - m_Data: 52036
-    - m_Data: 52402
-    - m_Data: 52410
-    - m_Data: 55478
-    - m_Data: 55480
-    - m_Data: 55482
+    - m_Data: 52174
+    - m_Data: 52176
+    - m_Data: 52178
+    - m_Data: 52180
+    - m_Data: 52182
+    - m_Data: 52184
+    - m_Data: 52186
+    - m_Data: 52188
+    - m_Data: 52190
+    - m_Data: 52192
+    - m_Data: 52194
+    - m_Data: 52196
+    - m_Data: 52198
+    - m_Data: 52200
+    - m_Data: 52202
+    - m_Data: 52204
+    - m_Data: 52206
+    - m_Data: 52208
+    - m_Data: 52210
+    - m_Data: 52212
+    - m_Data: 52214
+    - m_Data: 52218
+    - m_Data: 52220
+    - m_Data: 52222
+    - m_Data: 2147483647
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1345,30 +1346,30 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 51692
-    - m_Data: 51694
-    - m_Data: 51696
-    - m_Data: 51698
-    - m_Data: 51700
-    - m_Data: 51702
-    - m_Data: 51704
-    - m_Data: 51706
-    - m_Data: 51708
-    - m_Data: 51710
-    - m_Data: 51712
-    - m_Data: 51714
-    - m_Data: 51716
-    - m_Data: 51718
-    - m_Data: 51720
-    - m_Data: 51722
-    - m_Data: 51724
-    - m_Data: 51726
-    - m_Data: 52034
-    - m_Data: 52036
-    - m_Data: 52402
-    - m_Data: 55478
-    - m_Data: 55480
-    - m_Data: 55482
+    - m_Data: 52174
+    - m_Data: 52176
+    - m_Data: 52178
+    - m_Data: 52180
+    - m_Data: 52182
+    - m_Data: 52184
+    - m_Data: 52186
+    - m_Data: 52188
+    - m_Data: 52190
+    - m_Data: 52192
+    - m_Data: 52194
+    - m_Data: 52196
+    - m_Data: 52198
+    - m_Data: 52200
+    - m_Data: 52202
+    - m_Data: 52204
+    - m_Data: 52206
+    - m_Data: 52208
+    - m_Data: 52210
+    - m_Data: 52212
+    - m_Data: 52214
+    - m_Data: 52218
+    - m_Data: 52220
+    - m_Data: 52222
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1396,9 +1397,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_ListAreaState:
     m_SelectedInstanceIDs:
-    - m_Data: -256796
-    m_LastClickedInstanceID: -256796
-    m_HadKeyboardFocusLastEvent: 1
+    - m_Data: 62600
+    m_LastClickedInstanceID: 62600
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs:
     - m_Data: 41768
     - m_Data: 40492
@@ -1408,10 +1409,12 @@ MonoBehaviour:
     - m_Data: 42396
     - m_Data: 75560
     - m_Data: 51606
+    - m_Data: -68482
+    - m_Data: 60858
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Level1
-      m_OriginalName: Level1
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
@@ -1419,10 +1422,10 @@ MonoBehaviour:
         width: 0
         height: 0
       m_UserData:
-        m_Data: 49562
+        m_Data: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 13}
@@ -1646,8 +1649,8 @@ MonoBehaviour:
     y: 0
     width: 374
     height: 691
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
