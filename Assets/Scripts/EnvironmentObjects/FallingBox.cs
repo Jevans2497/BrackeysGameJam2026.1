@@ -60,11 +60,11 @@ public class FallingBox : MonoBehaviour
         {
             case TimeDilationSpeed.normalSpeed:
                 currentAnimationSpeed = defaultAnimationSpeed;
-                sr.color = colorPalette.timeDilationNormalSpeed;
+                // sr.color = colorPalette.timeDilationNormalSpeed;
                 break;
             case TimeDilationSpeed.fastSpeed:
                 currentAnimationSpeed = defaultAnimationSpeed * SPEED_MULTIPLIER;
-                sr.color = colorPalette.timeDilationFastSpeed;
+                // sr.color = colorPalette.timeDilationFastSpeed;
                 break;
         }
     }

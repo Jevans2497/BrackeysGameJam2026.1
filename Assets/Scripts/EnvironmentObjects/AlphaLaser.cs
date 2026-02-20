@@ -2,14 +2,18 @@ using UnityEngine;
 
 public class AlphaLaser : MonoBehaviour
 {
-    [SerializeField] ColorPalette colorPalette;
     private SpriteRenderer sr;
     public AudioClip alphaLaserSFX;
     public int attachedToLevelNumber;
+    private Color initialColor;
+    private ParticleSystem ps;
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        initialColor = sr.color;
+        ps = GetComponentInChildren<ParticleSystem>();
+        SetParticleSystemShapeBasedOnTransform();
         TimeManager.Instance.OnTimeDilationChange += HandleTimeDilationChanged;
         HandleTimeDilationChanged(TimeManager.Instance.currentSpeed);
     }
@@ -17,6 +21,15 @@ public class AlphaLaser : MonoBehaviour
     private void OnDisable()
     {
         TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
+    }
+
+    private void SetParticleSystemShapeBasedOnTransform()
+    {
+        var shape = ps.shape;
+        Vector3 scale = shape.scale;
+
+        scale.y = transform.localScale.y * 10.0f;
+        shape.scale = scale;
     }
 
     private void HandleTimeDilationChanged(TimeDilationSpeed newSpeed)
@@ -27,13 +40,15 @@ public class AlphaLaser : MonoBehaviour
         {
             case TimeDilationSpeed.normalSpeed:
                 collider.enabled = false;
-                sr.color = colorPalette.alphaLaserTransparent;
+                sr.color = new Color(initialColor.r, initialColor.g, initialColor.b, 0.25f);
+                ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
                 gameObject.layer = LayerMask.NameToLayer("Default");
                 StopAlphaLaserSFX();
                 break;
             case TimeDilationSpeed.fastSpeed:
                 collider.enabled = true;
-                sr.color = colorPalette.alphaLaserSolidify;
+                sr.color = initialColor;
+                ps.Play();
                 gameObject.layer = LayerMask.NameToLayer("Ground");
                 PlayAlphaLaserSFX();
                 break;
