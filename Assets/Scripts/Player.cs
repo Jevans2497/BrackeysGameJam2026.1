@@ -118,7 +118,7 @@ public class Player : MonoBehaviour
         HandleConsumeInput();
         HandleResetInput();
         HandleElectrifiedPlatform();
-        HandleFinalTimeDilation();
+        // HandleFinalTimeDilation();
         velocityLastFrame = rb.linearVelocity;
         wasGroundedLastFrame = IsGrounded();
 
@@ -477,7 +477,7 @@ public class Player : MonoBehaviour
     {
         if (consumeInput && !finalTimeDilation.isBeingConsumed)
         {
-            finalTimeDilation.Consume();
+            // finalTimeDilation.Consume();
         }
     }
 }

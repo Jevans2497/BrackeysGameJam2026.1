@@ -1,6 +1,7 @@
 using UnityEngine;
 using Cinemachine;
 using System.Collections;
+using NUnit.Framework;
 
 public class FinalLevelCameraManager : MonoBehaviour
 {
@@ -28,7 +29,6 @@ public class FinalLevelCameraManager : MonoBehaviour
             LevelManager.Instance.OnResetGame += ReleaseFinalLevelCamera;
             LevelManager.Instance.OnResetLevel += ReleaseFinalLevelCamera;
         }
-
     }
 
     private void OnDestroy()
@@ -100,11 +100,7 @@ public class FinalLevelCameraManager : MonoBehaviour
         SetFinalCameraYOffset(3.0f);
     }
 
-    private Coroutine shakeCoroutine;
-    private CinemachineFramingTransposer transposer;
-    private Vector3 originalOffset;
-
-    public void ShakeCamera(float duration, float intensity)
+    public void SetToFinalSceneCamera()
     {
         transposer = finalLevelVcam.GetCinemachineComponent<CinemachineFramingTransposer>();
 
@@ -114,17 +110,34 @@ public class FinalLevelCameraManager : MonoBehaviour
             return;
         }
 
+        transposer.m_TrackedObjectOffset = new Vector3(0, 3f, 0);
+    }
+
+    private Coroutine shakeCoroutine;
+    private CinemachineFramingTransposer transposer;
+    private Vector3 originalOffset;
+
+    public void ShakeCamera(float duration, float intensity, bool isLast)
+    {
+        transposer = finalLevelVcam.GetCinemachineComponent<CinemachineFramingTransposer>();
+
+        if (transposer == null)
+        {
+            Debug.LogWarning("FramingTransposer not found!");
+            return;
+        }
+
+        originalOffset = transposer.m_TrackedObjectOffset;
+
         if (shakeCoroutine != null)
             StopCoroutine(shakeCoroutine);
 
-        shakeCoroutine = StartCoroutine(ShakeRoutine(duration, intensity));
+        shakeCoroutine = StartCoroutine(ShakeRoutine(duration, intensity, isLast));
     }
 
-    private IEnumerator ShakeRoutine(float duration, float intensity)
+    private IEnumerator ShakeRoutine(float duration, float intensity, bool isLast)
     {
         float elapsed = 0f;
-
-        originalOffset = transposer.m_TrackedObjectOffset;
 
         while (elapsed < duration)
         {
@@ -135,6 +148,9 @@ public class FinalLevelCameraManager : MonoBehaviour
 
             transposer.m_TrackedObjectOffset =
                 originalOffset + new Vector3(offsetX, offsetY, 0f);
+
+            float intensityAddition = isLast ? 0.015f : 0.018f;
+            intensity += intensityAddition;
 
             yield return null;
         }

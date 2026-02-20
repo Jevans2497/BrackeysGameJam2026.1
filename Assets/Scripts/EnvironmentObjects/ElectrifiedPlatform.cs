@@ -5,21 +5,23 @@ public class ElectrifiedPlatform : MonoBehaviour
 {
 
     [SerializeField] ColorPalette colorPalette;
+    [SerializeField] Sprite normalSpeedSprite;
+    [SerializeField] Sprite fastSpeedSprite;
 
     private SpriteRenderer sr;
+    private Animator animator;
 
     private void Start()
     {
         TimeManager.Instance.OnTimeDilationChange += HandleTimeDilationChanged;
 
         sr = GetComponent<SpriteRenderer>();
-        // StartCoroutine(RunAnimation());
+        animator = GetComponent<Animator>();
     }
 
     private void OnDisable()
     {
         TimeManager.Instance.OnTimeDilationChange -= HandleTimeDilationChanged;
-
     }
 
     private void HandleTimeDilationChanged(TimeDilationSpeed newSpeed)
@@ -38,12 +40,12 @@ public class ElectrifiedPlatform : MonoBehaviour
     private void SetToNormalSpeedState()
     {
         gameObject.layer = LayerMask.NameToLayer("Ground");
-        sr.color = colorPalette.disabled;
+        animator.SetTrigger("PowerDown");
     }
 
     private void SetToFastSpeedState()
     {
         gameObject.layer = LayerMask.NameToLayer("ElectrifiedPlatform");
-        sr.color = colorPalette.timeDilationFastSpeed;
+        animator.SetTrigger("SpeedUp");
     }
 }
