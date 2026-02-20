@@ -26,7 +26,7 @@ public class TimeDilation : MonoBehaviour
 
     public void Consume(Player player)
     {
-        SFXManager.Instance.PlaySFX(timeDilationSFX, 0.0f, 1.0f, false);
+        SFXManager.Instance.PlaySFX(timeDilationSFX, 0.0f, 0.5f, false);
         StartCoroutine(RunConsumeAnimation(player, 0.75f));
     }
 
@@ -42,7 +42,6 @@ public class TimeDilation : MonoBehaviour
         {
             targetPosition = player.transform.position;
             float t = elapsedTime / duration;
-            // if (t > 0.85) t = 1f;
             t = t * t * t;
 
             this.particleSystem.transform.localScale = Vector3.Lerp(originalScale, targetScale, t);

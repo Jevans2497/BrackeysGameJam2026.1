@@ -5150,6 +5150,8 @@ MonoBehaviour:
   loseTimeDilationParticles: {fileID: 1956594573}
   jumpSFX: {fileID: 8300000, guid: 263ea2c555c6b4b74b0b6fe22f6cccb6, type: 3}
   landingSFX: {fileID: 8300000, guid: b889d4f970fe64e0994c014b2f870c60, type: 3}
+  deathSFX: {fileID: 8300000, guid: 4f22a24f597b04c16a500f6530336d0f, type: 3}
+  timeDilationReleaseSFX: {fileID: 8300000, guid: 42cbddd2813944addae510ea24f4ab49, type: 3}
   electrifedPlatformJumpSfx: {fileID: 8300000, guid: 066e2ab4acc2a43bf9962624916a92ce, type: 3}
   isInputEnabled: 1
   isFacingRight: 1

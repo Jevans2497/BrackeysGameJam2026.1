@@ -85,8 +85,7 @@ MonoBehaviour:
   particleSystem: {fileID: 7801000231205716108}
   colorPalette: {fileID: 11400000, guid: aab4734bf8eff4a19aa8cdffb39f3cef, type: 2}
   speed: 0
-  TimeDilationNormalSpeedSFX: {fileID: 8300000, guid: 01e7c9ffb198849aebd02264e9a6f5de, type: 3}
-  TimeDilationFastSpeedSFX: {fileID: 8300000, guid: b9616e67d55f54c03b59102cf9705627, type: 3}
+  timeDilationSFX: {fileID: 8300000, guid: fac050e8b05ac4f2dbc65f801447a679, type: 3}
 --- !u!1 &2975957062209129367
 GameObject:
   m_ObjectHideFlags: 0

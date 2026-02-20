@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     //Audio
     [SerializeField] private AudioClip jumpSFX;
     [SerializeField] private AudioClip landingSFX;
+    [SerializeField] private AudioClip deathSFX;
+    [SerializeField] private AudioClip timeDilationReleaseSFX;
     [SerializeField] private AudioClip electrifedPlatformJumpSfx;
 
     private List<LayerMask> jumpableLayers = new List<LayerMask>();
@@ -234,6 +236,7 @@ public class Player : MonoBehaviour
     {
         ResetTimeState();
         currentTimeDilation = null;
+        SFXManager.Instance.PlaySFX(timeDilationReleaseSFX, 0.0f, 0.5f, false, false);
 
         if (currentlyCollidingTimeDilation != null)
         {
@@ -382,6 +385,7 @@ public class Player : MonoBehaviour
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("GammaLaser") || other.gameObject.layer == LayerMask.NameToLayer("DeathLine"))
         {
+            SFXManager.Instance.PlaySFX(deathSFX, 0.0f, 0.2f, true, false);
             LevelManager.Instance.ResetLevel();
         }
     }
@@ -422,7 +426,6 @@ public class Player : MonoBehaviour
 
     private void SetToTimeState(TimeDilationSpeed speed)
     {
-
         Color newColor = speed == TimeDilationSpeed.normalSpeed ? colorPalette.timeDilationNormalSpeed : colorPalette.timeDilationFastSpeed;
         StartCoroutine(RunColorShiftAnimation(newColor, 0.5f));
         TimeManager.Instance.SetTimeDilation(speed);

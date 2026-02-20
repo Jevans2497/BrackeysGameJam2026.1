@@ -75,7 +75,7 @@ public class FallingBox : MonoBehaviour
         {
             if (LevelManager.Instance.GetCurrentLevelIndex() == attachedToLevelNumber && TimeManager.Instance.currentSpeed == TimeDilationSpeed.fastSpeed)
             {
-                SFXManager.Instance.PlaySFX(fallingBoxSFX, 0.0f, 0.1f, true, false);
+                SFXManager.Instance.PlaySFX(fallingBoxSFX, 0.0f, 0.05f, true, false);
             }
             transform.position = new Vector3(transform.position.x, initialY, transform.position.z);
         }
