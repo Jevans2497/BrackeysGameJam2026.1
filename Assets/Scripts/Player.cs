@@ -400,7 +400,7 @@ public class Player : MonoBehaviour
     private void OnEnteredTimeDilation(Collider2D other)
     {
         TimeDilation timeDilation = other.GetComponent<TimeDilation>();
-        if (timeDilation != null)
+        if (timeDilation != null && !timeDilation.isBeingConsumed)
         {
             currentlyCollidingTimeDilation = timeDilation;
             if (currentTimeDilation == null)

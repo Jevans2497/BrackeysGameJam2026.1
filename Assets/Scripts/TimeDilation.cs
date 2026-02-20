@@ -9,6 +9,7 @@ public class TimeDilation : MonoBehaviour
     public TimeDilationSpeed speed;
     Vector2 spawnPoint;
     Vector3 originalScale;
+    public bool isBeingConsumed = false;
 
     public AudioClip timeDilationSFX;
 
@@ -28,6 +29,7 @@ public class TimeDilation : MonoBehaviour
     {
         SFXManager.Instance.PlaySFX(timeDilationSFX, 0.0f, 0.5f, false);
         StartCoroutine(RunConsumeAnimation(player, 0.75f));
+        isBeingConsumed = true;
     }
 
     public IEnumerator RunConsumeAnimation(Player player, float duration)
@@ -72,6 +74,7 @@ public class TimeDilation : MonoBehaviour
     public void ResetTimeDilation()
     {
         StopAllCoroutines();
+        isBeingConsumed = false;
         this.particleSystem.transform.localScale = originalScale;
         this.transform.position = spawnPoint;
         CircleCollider2D collider = GetComponent<CircleCollider2D>();

@@ -132,4 +132,15 @@ public class LevelManager : MonoBehaviour
     {
         return currentLevelIndex;
     }
+
+    [SerializeField] GameObject deathLine;
+    [SerializeField] FinalLevelCameraManager finalLevelCamera;
+
+    public void FinalLevelReleaseDilationLinePassed()
+    {
+        player.ReleaseTimeDilation();
+        TimeManager.Instance.SetTimeDilationForLevel(TimeDilationSpeed.normalSpeed);
+        deathLine.SetActive(false);
+        finalLevelCamera.SetToCreditsState();
+    }
 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using Cinemachine;
 
 public class FinalLevelReleaseDilationLine : MonoBehaviour
 {
@@ -11,10 +10,7 @@ public class FinalLevelReleaseDilationLine : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player != null)
         {
-            player.ReleaseTimeDilation();
-            TimeManager.Instance.SetTimeDilationForLevel(TimeDilationSpeed.normalSpeed);
-            deathLine.SetActive(false);
-            finalLevelCamera.SetToCreditsState();
+            LevelManager.Instance.FinalLevelReleaseDilationLinePassed();
         }
     }
 }

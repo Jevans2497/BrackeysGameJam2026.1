@@ -16,7 +16,7 @@ public class Level : MonoBehaviour
     {
         transform.position = Vector3.zero + new Vector3(levelNumber * LevelManager.Instance.levelSeparationXDistance, 0, 0);
 
-        if (levelNumber != 9)
+        if (levelNumber != 10)
         {
             float baseXDistance = LevelManager.Instance.levelSeparationXDistance;
             float levelTriggerXPos = baseXDistance * levelNumber + 8.0f;
