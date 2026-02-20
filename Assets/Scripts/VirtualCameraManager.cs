@@ -66,32 +66,4 @@ public class LevelCameraController : MonoBehaviour
         transform.position = targetPosition;
     }
 
-    public void Shake(float duration, float magnitude)
-    {
-        if (shakeRoutine != null)
-            StopCoroutine(shakeRoutine);
-
-        Debug.Log("should shake");
-        shakeRoutine = StartCoroutine(ShakeRoutine(duration, magnitude));
-    }
-
-    private IEnumerator ShakeRoutine(float duration, float magnitude)
-    {
-        float elapsed = 0f;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-
-            float damper = 1f - Mathf.Clamp01(elapsed / duration);
-
-            Vector2 randomPoint = Random.insideUnitCircle * magnitude * damper;
-            shakeOffset = new Vector3(randomPoint.x, randomPoint.y, 0f);
-
-            yield return null;
-        }
-
-        shakeOffset = Vector3.zero;
-        shakeRoutine = null;
-    }
 }

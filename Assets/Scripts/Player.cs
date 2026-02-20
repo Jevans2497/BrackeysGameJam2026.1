@@ -278,7 +278,6 @@ public class Player : MonoBehaviour
                 float duration = 0.1f + 0.05f * normalized;
                 float magnitude = 0.05f + 0.075f * normalized;
 
-                LevelCameraController.Instance.Shake(duration, magnitude);
                 SFXManager.Instance.PlaySFX(landingSFX, 0.0f, 0.05f * ((1 + normalized) / 10.0f), true, false);
             }
             else
