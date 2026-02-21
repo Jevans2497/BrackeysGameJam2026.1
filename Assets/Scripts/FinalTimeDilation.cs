@@ -5,6 +5,8 @@ using System;
 
 public class FinalTimeDilation : MonoBehaviour
 {
+    public static FinalTimeDilation Instance;
+
     [SerializeField] private ParticleSystem particleSystem1;
     [SerializeField] private ParticleSystem particleSystem2;
     [SerializeField] private ParticleSystem particleSystem3;
@@ -15,6 +17,14 @@ public class FinalTimeDilation : MonoBehaviour
     public AudioClip finalTimeDilationSFX;
 
     private int consumptionCounter = 0;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     private void Start()
     {
@@ -153,6 +163,17 @@ public class FinalTimeDilation : MonoBehaviour
             yield return null;
         }
 
+        OpeningAndClosingShotManager.Instance.CutToBlack();
+
+        duration = 1f;
+        elapsedTime = 0f;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        LevelManager.Instance.RestartGame();
     }
 }
 

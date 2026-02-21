@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -151,4 +152,16 @@ public class LevelManager : MonoBehaviour
     {
         return inCredits;
     }
+
+    public void RestartGame()
+    {
+        Player.Instance.DisableInputActionsForRestartScene();
+
+        // Get the currently active scene
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Reload it
+        SceneManager.LoadScene(currentScene.name);
+    }
+
 }

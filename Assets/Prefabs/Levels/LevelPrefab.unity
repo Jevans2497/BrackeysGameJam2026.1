@@ -862,9 +862,9 @@ MonoBehaviour:
   - {fileID: 1896675874467277599, guid: 62f1fe68d11bf48f499c7ef4ab87db6a, type: 3}
   - {fileID: 3318023720260654639, guid: 92a30eca0bdab4653999d0f0fffdf9d6, type: 3}
   levelSeparationXDistance: 20
-  inDebugMode: 1
+  inDebugMode: 0
   isDebuggingFinalLevel: 0
-  debugDilationSpeed: 0
+  debugDilationSpeed: 1
   deathLine: {fileID: 770620627}
   finalLevelCamera: {fileID: 1792303836}
 --- !u!1 &1084059781

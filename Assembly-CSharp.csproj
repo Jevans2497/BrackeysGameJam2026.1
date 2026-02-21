@@ -51,6 +51,7 @@
     <Compile Include="Assets/Scripts/VirtualCameraManager.cs" />
     <Compile Include="Assets/Scripts/Level.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
+    <Compile Include="Assets/Scripts/OpeningCutsceneManager.cs" />
     <Compile Include="Assets/Scripts/DialogueSpawner.cs" />
     <Compile Include="Assets/Scripts/ColorPalette.cs" />
     <Compile Include="Assets/Scripts/FinalLevelReleaseDilationLine.cs" />

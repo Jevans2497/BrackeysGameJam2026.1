@@ -46,10 +46,10 @@ public class AlphaLaser : MonoBehaviour
                 StopAlphaLaserSFX();
                 break;
             case TimeDilationSpeed.fastSpeed:
+                gameObject.layer = LayerMask.NameToLayer("Ground");
                 collider.enabled = true;
                 sr.color = initialColor;
                 ps.Play();
-                gameObject.layer = LayerMask.NameToLayer("Ground");
                 PlayAlphaLaserSFX();
                 break;
         }

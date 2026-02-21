@@ -72,6 +72,10 @@ public class Player : MonoBehaviour
     private TimeDilation currentTimeDilation;
     private TimeDilation currentlyCollidingTimeDilation;
 
+    private bool hasEnteredFinalTimeDilation = false;
+
+    private float resetTimer;
+
     void Awake()
     {
         if (Instance == null)
@@ -99,6 +103,12 @@ public class Player : MonoBehaviour
         LevelManager.Instance.OnResetLevel -= Reset;
     }
 
+    private void OnDestroy()
+    {
+        if (input != null)
+            input.Player.Disable();
+    }
+
     void Update()
     {
         if (isInputEnabled)
@@ -118,7 +128,7 @@ public class Player : MonoBehaviour
         HandleConsumeInput();
         HandleResetInput();
         HandleElectrifiedPlatform();
-        // HandleFinalTimeDilation();
+        HandleFinalTimeDilation();
         velocityLastFrame = rb.linearVelocity;
         wasGroundedLastFrame = IsGrounded();
 
@@ -127,6 +137,8 @@ public class Player : MonoBehaviour
             isFallingEnabled = true;
             isJumpEnabled = true;
         }
+
+        resetTimer += Time.fixedDeltaTime;
     }
 
     private void Reset()
@@ -195,7 +207,7 @@ public class Player : MonoBehaviour
 
     private void HandleConsumeInput()
     {
-        if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null)
+        if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null && resetTimer > 0.3f)
         {
             ConsumeTimeDilation();
             if (LevelManager.Instance.isFinalLevel())
@@ -212,18 +224,10 @@ public class Player : MonoBehaviour
 
     private void HandleResetInput()
     {
-        if (resetInput)
+        if (resetInput && resetTimer > 0.3f)
         {
-            resetInputHeldCounter += Time.fixedDeltaTime;
-            if (resetInputHeldCounter >= 0.4f)
-            {
-                LevelManager.Instance.ResetLevel();
-                resetInputHeldCounter = 0.0f;
-            }
-        }
-        else
-        {
-            resetInputHeldCounter = 0.0f;
+            LevelManager.Instance.ResetLevel();
+            resetTimer = 0.0f;
         }
     }
 
@@ -390,6 +394,10 @@ public class Player : MonoBehaviour
             SFXManager.Instance.PlaySFX(deathSFX, 0.0f, 0.2f, true, false);
             LevelManager.Instance.ResetLevel();
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("FinalTimeDilation"))
+        {
+            hasEnteredFinalTimeDilation = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -475,9 +483,17 @@ public class Player : MonoBehaviour
 
     public void HandleFinalTimeDilation()
     {
-        if (consumeInput && !finalTimeDilation.isBeingConsumed)
+        if (FinalTimeDilation.Instance != null)
         {
-            // finalTimeDilation.Consume();
+            if (consumeInput && !FinalTimeDilation.Instance.isBeingConsumed && hasEnteredFinalTimeDilation)
+            {
+                FinalTimeDilation.Instance.Consume();
+            }
         }
+    }
+
+    public void DisableInputActionsForRestartScene()
+    {
+        input.Player.Disable();
     }
 }

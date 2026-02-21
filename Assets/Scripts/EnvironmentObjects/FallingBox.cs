@@ -85,7 +85,7 @@ public class FallingBox : MonoBehaviour
     private bool IsGrounded()
     {
         int groundLayerMask = 1 << LayerMask.NameToLayer("Ground");
-        Collider2D[] hits = Physics2D.OverlapCircleAll(groundCheck.position, 0.05f, groundLayerMask);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(groundCheck.position, 0.1f, groundLayerMask);
 
         foreach (var hit in hits)
         {
