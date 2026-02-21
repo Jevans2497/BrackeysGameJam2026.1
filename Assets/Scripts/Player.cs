@@ -207,7 +207,7 @@ public class Player : MonoBehaviour
 
     private void HandleConsumeInput()
     {
-        if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null && resetTimer > 1.0f)
+        if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null)
         {
             ConsumeTimeDilation();
             if (LevelManager.Instance.isFinalLevel())
@@ -233,10 +233,13 @@ public class Player : MonoBehaviour
 
     private void ConsumeTimeDilation()
     {
-        SetToTimeState(currentlyCollidingTimeDilation.speed);
-        currentlyCollidingTimeDilation.Consume(this);
-        currentTimeDilation = currentlyCollidingTimeDilation;
-        currentlyCollidingTimeDilation = null;
+        if (resetTimer > 0.7f)
+        {
+            SetToTimeState(currentlyCollidingTimeDilation.speed);
+            currentlyCollidingTimeDilation.Consume(this);
+            currentTimeDilation = currentlyCollidingTimeDilation;
+            currentlyCollidingTimeDilation = null;
+        }
     }
 
     public void ReleaseTimeDilation()

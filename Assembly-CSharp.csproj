@@ -68,6 +68,7 @@
     <Compile Include="Assets/Scripts/FinalLevelFallingBoxColliderTrigger.cs" />
     <Compile Include="Assets/Scripts/EnvironmentObjects/AlphaLaser.cs" />
     <Compile Include="Assets/Scripts/FinalLevelCameraManager.cs" />
+    <Compile Include="Assets/Scripts/CutMusicLine.cs" />
     <Compile Include="Assets/Scripts/TextUIManager.cs" />
     <Compile Include="Assets/Scripts/TimeDilation.cs" />
     <Compile Include="Assets/Scripts/LevelManager.cs" />

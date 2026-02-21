@@ -12,9 +12,14 @@ public class FinalTimeDilation : MonoBehaviour
     [SerializeField] private ParticleSystem particleSystem3;
     public bool isBeingConsumed;
 
-    private ParticleConsumeData[] particles;
+    [SerializeField] private AudioClip absorbing3SecSFX;
+    [SerializeField] private AudioClip absorbing4SecSFX;
+    [SerializeField] private AudioClip absorbing5SecSFX;
+    [SerializeField] private AudioClip absorbingReboundSFX;
+    [SerializeField] private AudioClip dingSFX;
+    [SerializeField] private AudioClip finalExplosionSFX;
 
-    public AudioClip finalTimeDilationSFX;
+    private ParticleConsumeData[] particles;
 
     private int consumptionCounter = 0;
 
@@ -40,7 +45,6 @@ public class FinalTimeDilation : MonoBehaviour
     {
         if (isBeingConsumed) return;
         isBeingConsumed = true;
-        SFXManager.Instance.PlaySFX(finalTimeDilationSFX, 0.0f, 0.5f, false);
         RunConsumeAnimations();
     }
 
@@ -63,6 +67,11 @@ public class FinalTimeDilation : MonoBehaviour
 
         Color originalColor = ps.main.startColor.color;
         Color targetColor = Color.black;
+
+        if (index == 0)
+        {
+            PlaySFXForPulseCount(particles[0].pulseCount);
+        }
 
         consumeData.activeTween = consumeData.system.transform
             .DOScale(targetScale, consumeData.duration)
@@ -107,6 +116,12 @@ public class FinalTimeDilation : MonoBehaviour
 
     private void ResetTimeDilation(ParticleSystem ps, int index)
     {
+        if (index == 0)
+        {
+            SFXManager.Instance.StopClip(absorbing3SecSFX);
+            SFXManager.Instance.StopClip(absorbing4SecSFX);
+            SFXManager.Instance.PlaySFX(absorbingReboundSFX, 0.0f, 0.25f);
+        }
         float duration = 0.2f;
 
         Vector3 targetScale = particles[index].originalScale;
@@ -122,6 +137,11 @@ public class FinalTimeDilation : MonoBehaviour
 
     private void RunFinalExplosions()
     {
+        DOVirtual.DelayedCall(2f, () =>
+        {
+            SFXManager.Instance.PlaySFX(dingSFX, 0.0f, 0.025f);
+        });
+
         for (int i = 0; i < particles.Length; i++)
         {
             StartCoroutine(RunFinalExplosion(i));
@@ -133,7 +153,7 @@ public class FinalTimeDilation : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         ParticleSystem ps = particles[index].system;
 
-        float duration = 3.5f;
+        float duration = 4.75f;
 
         Vector3 startScale = ps.transform.localScale;
         Vector3 targetScale = particles[index].originalScale * 20;
@@ -150,7 +170,11 @@ public class FinalTimeDilation : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(0.3f);
+        if (index == 0)
+        {
+            SFXManager.Instance.StopClip(dingSFX);
+            SFXManager.Instance.PlaySFX(finalExplosionSFX, 1.0f, 0.15f);
+        }
 
         duration = 0.2f;
         elapsedTime = 0f;
@@ -174,6 +198,39 @@ public class FinalTimeDilation : MonoBehaviour
         }
 
         LevelManager.Instance.RestartGame();
+    }
+
+    private void PlaySFXForPulseCount(int pulseCount)
+    {
+        float delay = 1.0f;
+        switch (pulseCount)
+        {
+            case 0:
+                delay = 0.0f;
+                break;
+            case 1:
+                delay = 0.5f;
+                break;
+            case 2:
+                delay = 1.0f;
+                break;
+        }
+
+        DOVirtual.DelayedCall(delay, () =>
+        {
+            if (pulseCount == 0)
+            {
+                SFXManager.Instance.PlaySFX(absorbing3SecSFX, 0.0f, 0.5f);
+            }
+            else if (pulseCount == 1)
+            {
+                SFXManager.Instance.PlaySFX(absorbing4SecSFX, 0.0f, 0.5f);
+            }
+            else if (pulseCount == 2)
+            {
+                SFXManager.Instance.PlaySFX(absorbing5SecSFX, 0.0f, 0.5f);
+            }
+        });
     }
 }
 

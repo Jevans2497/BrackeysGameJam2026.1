@@ -8,7 +8,7 @@ public class TextUIManager : MonoBehaviour
 
     private TMP_Text dialogueText;
     private string message;
-    private float typingSpeed = 0.08f;
+    private float typingSpeed = 0.06f;
     private const float SPEED_UP_TEXT_MULTIPLIER = 0.25F;
 
     private PlayerInputActions input;
