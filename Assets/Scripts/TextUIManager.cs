@@ -14,6 +14,9 @@ public class TextUIManager : MonoBehaviour
     private PlayerInputActions input;
     private bool speedUpTypingInputPressed;
 
+    public AudioClip radioNoiseSFX;
+    public AudioClip dialogueSFX;
+
     private void Start()
     {
         dialogueText = GetComponent<TMP_Text>();
@@ -51,6 +54,7 @@ public class TextUIManager : MonoBehaviour
         speedUpTypingInputPressed = false;
         StopAllCoroutines();
         StartCoroutine(TypeText());
+        StartCoroutine(PlaySFX());
     }
 
     private IEnumerator TypeText()
@@ -100,6 +104,9 @@ public class TextUIManager : MonoBehaviour
 
     private IEnumerator RunHideTextAnimation()
     {
+        SFXManager.Instance.PlaySFX(radioNoiseSFX, 0.0f, 0.25f, false, false);
+        SFXManager.Instance.StopClip(dialogueSFX);
+
         yield return new WaitForSeconds(1.0f);
 
         float duration = 1.0f;
@@ -148,4 +155,10 @@ public class TextUIManager : MonoBehaviour
         return speedMultiplier;
     }
 
+    private IEnumerator PlaySFX()
+    {
+        SFXManager.Instance.PlaySFX(radioNoiseSFX, 0.0f, 0.25f, false, false);
+        yield return new WaitForSeconds(0.05f);
+        SFXManager.Instance.PlaySFX(dialogueSFX, 0.0f, 0.5f, false, false);
+    }
 }

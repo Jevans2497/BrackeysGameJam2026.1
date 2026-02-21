@@ -37,13 +37,13 @@ public class MusicManager : MonoBehaviour
     {
         normalSpeedAudioSource.time = fastSpeedAudioSource.time * SPEED_DIFFERENCE;
         fastSpeedAudioSource.volume = 0.0f;
-        normalSpeedAudioSource.volume = 100.0f;
+        normalSpeedAudioSource.volume = 70.0f;
     }
 
     private void SetMusicToFastSpeed()
     {
         fastSpeedAudioSource.time = normalSpeedAudioSource.time * SPEED_DIFFERENCE_RECIPROCAL;
         normalSpeedAudioSource.volume = 0.0f;
-        fastSpeedAudioSource.volume = 100.0f;
+        fastSpeedAudioSource.volume = 70.0f;
     }
 }

@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947d75356e2ef4a3cbdb678e74159135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextUIManager
+  radioNoiseSFX: {fileID: 8300000, guid: 610280bc10b8a4645aa84f753838d660, type: 3}
+  dialogueSFX: {fileID: 8300000, guid: 139ae4c30c41a4f5d84817c36d8dc71f, type: 3}
 --- !u!1 &6103644525313344926
 GameObject:
   m_ObjectHideFlags: 0

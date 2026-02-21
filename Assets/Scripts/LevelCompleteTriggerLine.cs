@@ -14,7 +14,7 @@ public class LevelCompleteTriggerLine : MonoBehaviour
         if (player != null)
         {
             player.ReleaseTimeDilation();
-            SFXManager.Instance.PlaySFX(levelCompleteSFX, 0.0f, 5f, false);
+            SFXManager.Instance.PlaySFX(levelCompleteSFX, 0.0f, 100f, false);
             if (player.isFacingRight)
                 enteredLeft = true;
         }

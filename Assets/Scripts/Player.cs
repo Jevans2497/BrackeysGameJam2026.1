@@ -201,13 +201,13 @@ public class Player : MonoBehaviour
             StartCoroutine(SquashAndStretch());
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JUMP_FORCE);
             jumpDelayTimer = JUMP_DELAY;
-            SFXManager.Instance.PlaySFX(jumpSFX, 0.0f, 0.02f, false, false);
+            SFXManager.Instance.PlaySFX(jumpSFX, 0.0f, 0.15f, false, false);
         }
     }
 
     private void HandleConsumeInput()
     {
-        if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null && resetTimer > 0.3f)
+        if (consumeInput && currentlyCollidingTimeDilation != null && currentTimeDilation == null && resetTimer > 1.0f)
         {
             ConsumeTimeDilation();
             if (LevelManager.Instance.isFinalLevel())
@@ -398,6 +398,11 @@ public class Player : MonoBehaviour
         {
             hasEnteredFinalTimeDilation = true;
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("TutorialDeathLine") && TimeManager.Instance.currentSpeed == TimeDilationSpeed.fastSpeed)
+        {
+            TutorialDeathLine.Instance.ShowTutorialDeathText();
+            LevelManager.Instance.ResetLevel();
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -495,5 +500,14 @@ public class Player : MonoBehaviour
     public void DisableInputActionsForRestartScene()
     {
         input.Player.Disable();
+    }
+
+    public void ResetButtonPressed()
+    {
+        if (isInputEnabled)
+        {
+            LevelManager.Instance.ResetLevel();
+            resetTimer = 0.0f;
+        }
     }
 }

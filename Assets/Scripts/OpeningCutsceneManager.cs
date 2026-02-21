@@ -22,6 +22,10 @@ public class OpeningAndClosingShotManager : MonoBehaviour
             Player.Instance.DisableInput();
             StartCoroutine(FadeIn());
         }
+        else
+        {
+            blackImage.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+        }
     }
 
     private IEnumerator FadeIn()
@@ -44,6 +48,7 @@ public class OpeningAndClosingShotManager : MonoBehaviour
 
     public void CutToBlack()
     {
+        this.gameObject.SetActive(true);
         blackImage.color = Color.black;
     }
 }

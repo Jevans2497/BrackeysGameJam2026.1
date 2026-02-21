@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,9 +28,11 @@ public class LevelManager : MonoBehaviour
     public Action OnFinalLevelTriggerCameraShift;
     public Action OnResetGame;
 
-    int currentLevelIndex = 0;
+    private int currentLevelIndex = 0;
 
     private bool inCredits = false;
+
+    [SerializeField] private TMP_Text levelNumDisplay;
 
     private void Awake()
     {
@@ -49,6 +52,7 @@ public class LevelManager : MonoBehaviour
     {
         lastLevelInstance = currentLevelInstance;
         currentLevelIndex++;
+        UpdateLevelNumDisplay();
         if (currentLevelIndex < levels.Count)
         {
             Level nextLevel = levels[currentLevelIndex];
@@ -133,6 +137,10 @@ public class LevelManager : MonoBehaviour
 
     public int GetCurrentLevelIndex()
     {
+        if (isDebuggingFinalLevel)
+        {
+            return 10;
+        }
         return currentLevelIndex;
     }
 
@@ -164,4 +172,8 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(currentScene.name);
     }
 
+    private void UpdateLevelNumDisplay()
+    {
+        levelNumDisplay.text = "Level\n" + currentLevelIndex + "/10";
+    }
 }

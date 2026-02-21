@@ -64,6 +64,7 @@
     <Compile Include="Assets/Scripts/SFXManager.cs" />
     <Compile Include="Assets/Scripts/EnvironmentObjects/ElectrifiedPlatform.cs" />
     <Compile Include="Assets/Scripts/MusicManager.cs" />
+    <Compile Include="Assets/Scripts/TutorialDeathLine.cs" />
     <Compile Include="Assets/Scripts/FinalLevelFallingBoxColliderTrigger.cs" />
     <Compile Include="Assets/Scripts/EnvironmentObjects/AlphaLaser.cs" />
     <Compile Include="Assets/Scripts/FinalLevelCameraManager.cs" />

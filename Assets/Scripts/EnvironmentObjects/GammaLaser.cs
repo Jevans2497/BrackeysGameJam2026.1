@@ -81,7 +81,10 @@ public class GammaLaser : MonoBehaviour
     private void PlayGammaLaserSFX()
     {
         if (LevelManager.Instance.IsInCredits()) return;
+        Debug.Log(LevelManager.Instance.GetCurrentLevelIndex() + " Attached to level " + attachedToLevel);
         if (LevelManager.Instance.GetCurrentLevelIndex() == attachedToLevel)
+        {
+            Debug.Log("Should be playing");
             if (TimeManager.Instance.currentSpeed == TimeDilationSpeed.normalSpeed)
             {
                 SFXManager.Instance.PlaySFX(gammaLaserSFX, -0.3f, 0.125f);
@@ -90,5 +93,6 @@ public class GammaLaser : MonoBehaviour
             {
                 SFXManager.Instance.PlaySFX(gammaLaserSFX, 0.0f, 0.125f);
             }
+        }
     }
 }
