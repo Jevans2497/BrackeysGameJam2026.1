@@ -4,7 +4,7 @@ using UnityEngine;
 public class TimeDilation : MonoBehaviour
 {
 
-    [SerializeField] private ParticleSystem particleSystem;
+    [SerializeField] private ParticleSystem ps;
     [SerializeField] private ColorPalette colorPalette;
     public TimeDilationSpeed speed;
     Vector2 spawnPoint;
@@ -16,7 +16,7 @@ public class TimeDilation : MonoBehaviour
     private void Start()
     {
         spawnPoint = transform.position;
-        originalScale = particleSystem.transform.localScale;
+        originalScale = ps.transform.localScale;
         LevelManager.Instance.OnResetLevel += ResetTimeDilation;
     }
 
@@ -34,7 +34,7 @@ public class TimeDilation : MonoBehaviour
 
     public IEnumerator RunConsumeAnimation(Player player, float duration)
     {
-        Vector3 originalScale = this.particleSystem.transform.localScale;
+        Vector3 originalScale = this.ps.transform.localScale;
         Vector3 targetScale = Vector3.zero;
         Vector3 currentPosition = this.transform.position;
         Vector3 targetPosition = player.transform.position;
@@ -46,13 +46,13 @@ public class TimeDilation : MonoBehaviour
             float t = elapsedTime / duration;
             t = t * t * t;
 
-            this.particleSystem.transform.localScale = Vector3.Lerp(originalScale, targetScale, t);
+            this.ps.transform.localScale = Vector3.Lerp(originalScale, targetScale, t);
             this.transform.position = Vector3.Lerp(currentPosition, targetPosition, t);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        this.particleSystem.transform.localScale = targetScale;
+        this.ps.transform.localScale = targetScale;
         this.transform.position = targetPosition;
         CircleCollider2D collider = GetComponent<CircleCollider2D>();
         collider.enabled = false;
@@ -67,7 +67,7 @@ public class TimeDilation : MonoBehaviour
             case TimeDilationSpeed.fastSpeed:
                 return colorPalette.timeDilationFastSpeed;
             default:
-                return particleSystem.main.startColor.color;
+                return ps.main.startColor.color;
         }
     }
 
@@ -75,7 +75,7 @@ public class TimeDilation : MonoBehaviour
     {
         StopAllCoroutines();
         isBeingConsumed = false;
-        this.particleSystem.transform.localScale = originalScale;
+        this.ps.transform.localScale = originalScale;
         this.transform.position = spawnPoint;
         CircleCollider2D collider = GetComponent<CircleCollider2D>();
         collider.enabled = true;

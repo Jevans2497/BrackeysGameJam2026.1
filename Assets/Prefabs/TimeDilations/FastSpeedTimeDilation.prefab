@@ -4919,7 +4919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a75723684972145e099a62cc344387fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeDilation
-  particleSystem: {fileID: 3349654798509464422}
+  ps: {fileID: 3349654798509464422}
   colorPalette: {fileID: 11400000, guid: aab4734bf8eff4a19aa8cdffb39f3cef, type: 2}
   speed: 1
+  isBeingConsumed: 0
   timeDilationSFX: {fileID: 8300000, guid: fac050e8b05ac4f2dbc65f801447a679, type: 3}

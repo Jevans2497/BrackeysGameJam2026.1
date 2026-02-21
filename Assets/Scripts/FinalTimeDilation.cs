@@ -21,8 +21,6 @@ public class FinalTimeDilation : MonoBehaviour
 
     private ParticleConsumeData[] particles;
 
-    private int consumptionCounter = 0;
-
     private void Awake()
     {
         if (Instance == null)

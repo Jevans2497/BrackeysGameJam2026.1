@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using TMPro;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Player : MonoBehaviour
