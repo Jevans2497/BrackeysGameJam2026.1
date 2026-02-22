@@ -44,9 +44,9 @@ public class Player : MonoBehaviour
     //MOVEMENT
     private const float MAX_SPEED = 10f;
     private const float GROUND_ACCELERATION = 80f;
-    private const float GROUND_DECELERATION = 50f;
+    private const float GROUND_DECELERATION = 70f;
     private const float AIR_ACCELERATION = 50f;
-    private const float AIR_DECELERATION = 30f;
+    private const float AIR_DECELERATION = 45f;
     public bool isFacingRight = true;
 
     //JUMPING
@@ -74,6 +74,8 @@ public class Player : MonoBehaviour
     private bool hasEnteredFinalTimeDilation = false;
 
     private float resetTimer;
+
+    private bool isMoveInputEnabled = true;
 
     void Awake()
     {
@@ -149,9 +151,12 @@ public class Player : MonoBehaviour
 
     private void ReadInput()
     {
-        moveInput = input.Player.Move.ReadValue<Vector2>().x;
-        jumpInput = input.Player.Jump.ReadValue<Vector2>().y;
-        jumpReleased = jumpInput < 0.1f;
+        if (isMoveInputEnabled)
+        {
+            moveInput = input.Player.Move.ReadValue<Vector2>().x;
+            jumpInput = input.Player.Jump.ReadValue<Vector2>().y;
+            jumpReleased = jumpInput < 0.1f;
+        }
         consumeInput = input.Player.Consume.IsPressed();
         resetInput = input.Player.Reset.IsPressed();
     }
@@ -165,6 +170,7 @@ public class Player : MonoBehaviour
         float decel = isGrounded ? GROUND_DECELERATION : AIR_DECELERATION;
 
         bool isAccelerating = Mathf.Abs(targetSpeed) > 0.01f;
+        HandleSpriteBehavior(isAccelerating, isGrounded);
 
         if (isAccelerating)
             velocity.x = Mathf.MoveTowards(rb.linearVelocity.x, targetSpeed, accel * Time.fixedDeltaTime);
@@ -172,8 +178,6 @@ public class Player : MonoBehaviour
             velocity.x = Mathf.MoveTowards(rb.linearVelocity.x, 0f, decel * Time.fixedDeltaTime);
 
         rb.linearVelocity = new Vector2(velocity.x, rb.linearVelocity.y);
-
-        HandleSpriteBehavior(isAccelerating, isGrounded);
     }
 
     private void HandleSpriteBehavior(bool isAccelerating, bool isGrounded)
@@ -495,6 +499,9 @@ public class Player : MonoBehaviour
             if (consumeInput && !FinalTimeDilation.Instance.isBeingConsumed && hasEnteredFinalTimeDilation)
             {
                 FinalTimeDilation.Instance.Consume();
+                isMoveInputEnabled = false;
+                moveInput = 0.0f;
+                jumpInput = 0.0f;
             }
         }
     }

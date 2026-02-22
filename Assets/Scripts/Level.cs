@@ -23,8 +23,8 @@ public class Level : MonoBehaviour
             GameObject levelTriggerGO = Instantiate(LevelCompleteTriggerLinePrefab, new Vector3(levelTriggerXPos, 0.0f, 0.0f), Quaternion.identity);
             levelCompleteTriggerLineInstance = levelTriggerGO.GetComponent<LevelCompleteTriggerLine>();
 
-            float backWallXPos = baseXDistance * levelNumber - 11.0f;
-            GameObject backWallGO = Instantiate(levelBackWallPrefab, new Vector3(backWallXPos, 0.0f, 0.0f), Quaternion.identity);
+            // float backWallXPos = baseXDistance * levelNumber - 11.0f;
+            // GameObject backWallGO = Instantiate(levelBackWallPrefab, new Vector3(backWallXPos, 0.0f, 0.0f), Quaternion.identity);
         }
     }
 

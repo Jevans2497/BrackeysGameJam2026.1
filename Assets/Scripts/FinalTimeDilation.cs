@@ -118,7 +118,7 @@ public class FinalTimeDilation : MonoBehaviour
         {
             SFXManager.Instance.StopClip(absorbing3SecSFX);
             SFXManager.Instance.StopClip(absorbing4SecSFX);
-            SFXManager.Instance.PlaySFX(absorbingReboundSFX, 0.0f, 0.25f);
+            SFXManager.Instance.PlaySFX(absorbingReboundSFX, 0.0f, 0.45f);
         }
         float duration = 0.2f;
 
@@ -135,9 +135,9 @@ public class FinalTimeDilation : MonoBehaviour
 
     private void RunFinalExplosions()
     {
-        DOVirtual.DelayedCall(2f, () =>
+        DOVirtual.DelayedCall(1.5f, () =>
         {
-            SFXManager.Instance.PlaySFX(dingSFX, 0.0f, 0.025f);
+            SFXManager.Instance.PlaySFX(dingSFX, 0.0f, 0.040f);
         });
 
         for (int i = 0; i < particles.Length; i++)
@@ -171,7 +171,8 @@ public class FinalTimeDilation : MonoBehaviour
         if (index == 0)
         {
             SFXManager.Instance.StopClip(dingSFX);
-            SFXManager.Instance.PlaySFX(finalExplosionSFX, 1.0f, 0.15f);
+            SFXManager.Instance.PlaySFX(finalExplosionSFX, 1.0f, 0.25f);
+            FinalLevelCameraManager.Instance.ShakeCamera(1f, 30, false);
         }
 
         duration = 0.2f;
@@ -218,15 +219,15 @@ public class FinalTimeDilation : MonoBehaviour
         {
             if (pulseCount == 0)
             {
-                SFXManager.Instance.PlaySFX(absorbing3SecSFX, 0.0f, 0.5f);
+                SFXManager.Instance.PlaySFX(absorbing3SecSFX, 0.0f, 2f);
             }
             else if (pulseCount == 1)
             {
-                SFXManager.Instance.PlaySFX(absorbing4SecSFX, 0.0f, 0.5f);
+                SFXManager.Instance.PlaySFX(absorbing4SecSFX, 0.0f, 2f);
             }
             else if (pulseCount == 2)
             {
-                SFXManager.Instance.PlaySFX(absorbing5SecSFX, 0.0f, 0.5f);
+                SFXManager.Instance.PlaySFX(absorbing5SecSFX, 0.0f, 2.2f);
             }
         });
     }

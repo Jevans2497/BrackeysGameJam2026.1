@@ -26,7 +26,16 @@ public class LevelCompleteTriggerLine : MonoBehaviour
         if (player != null)
         {
             if (player.isFacingRight && enteredLeft)
+            {
                 LevelManager.Instance.AdvanceLevel();
+                DisableCollider();
+            }
         }
+    }
+
+    private void DisableCollider()
+    {
+        BoxCollider2D collider = GetComponent<BoxCollider2D>();
+        collider.isTrigger = false;
     }
 }

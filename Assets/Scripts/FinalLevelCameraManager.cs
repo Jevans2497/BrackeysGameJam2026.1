@@ -10,6 +10,9 @@ public class FinalLevelCameraManager : MonoBehaviour
     [Header("Camera")]
     [SerializeField] private CinemachineVirtualCamera finalLevelVcam;
 
+    private Vector3 expectedOffset;
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -87,6 +90,7 @@ public class FinalLevelCameraManager : MonoBehaviour
         if (transposer != null)
         {
             transposer.m_TrackedObjectOffset.y = offset;
+            expectedOffset.y = offset;
         }
         else
         {
@@ -98,6 +102,7 @@ public class FinalLevelCameraManager : MonoBehaviour
     public void ResetFinalLevelCamera()
     {
         SetFinalCameraYOffset(3.0f);
+        expectedOffset.y = 3.0f;
     }
 
     public void SetToFinalSceneCamera()
@@ -111,11 +116,11 @@ public class FinalLevelCameraManager : MonoBehaviour
         }
 
         transposer.m_TrackedObjectOffset = new Vector3(0, 3f, 0);
+        expectedOffset.y = 3.0f;
     }
 
     private Coroutine shakeCoroutine;
     private CinemachineFramingTransposer transposer;
-    private Vector3 originalOffset;
 
     public void ShakeCamera(float duration, float intensity, bool isLast)
     {
@@ -126,8 +131,6 @@ public class FinalLevelCameraManager : MonoBehaviour
             Debug.LogWarning("FramingTransposer not found!");
             return;
         }
-
-        originalOffset = transposer.m_TrackedObjectOffset;
 
         if (shakeCoroutine != null)
             StopCoroutine(shakeCoroutine);
@@ -147,15 +150,15 @@ public class FinalLevelCameraManager : MonoBehaviour
             float offsetY = Random.Range(-0.1f, 0.1f) * intensity;
 
             transposer.m_TrackedObjectOffset =
-                originalOffset + new Vector3(offsetX, offsetY, 0f);
+                expectedOffset + new Vector3(offsetX, offsetY, 0f);
 
-            float intensityAddition = isLast ? 0.015f : 0.018f;
+            float intensityAddition = isLast ? 0.03f : 0.035f;
             intensity += intensityAddition;
 
             yield return null;
         }
 
-        transposer.m_TrackedObjectOffset = originalOffset;
+        transposer.m_TrackedObjectOffset = expectedOffset;
         shakeCoroutine = null;
     }
 }
